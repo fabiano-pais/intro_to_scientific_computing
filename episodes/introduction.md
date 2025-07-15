@@ -49,7 +49,7 @@ associated with the lessons. They appear in the "Instructor View"
 What is the output of this command?
 
 ```r
-paste("Can", "I", "learn", "how", "to", "do", "this?, Yes!")
+paste("Can", "I", "learn", "how", "to", "do", "this?", "Yes!")
 ```
 
 :::::::::::::::::::::::: solution 
@@ -57,7 +57,7 @@ paste("Can", "I", "learn", "how", "to", "do", "this?, Yes!")
 ## Output
  
 ```output
-[1] "Can I learn how to do this?"
+[1] "Can I learn how to do this? Yes!"
 ```
 
 :::::::::::::::::::::::::::::::::
