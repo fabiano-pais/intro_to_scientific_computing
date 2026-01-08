@@ -73,7 +73,7 @@ Learn the commands below as they're the most used ones in BASH:
 ## Exercises
 
 ### Exercise 1
-Open your terminal (in jupyter notebook) and follow the commands below to practice BASH commands:
+Open your terminal (in jupyter notebook) and execute the commands below to practice BASH commands:
 ```bash
 $ mkdir course_folder
 $ cd course_folder
@@ -87,7 +87,7 @@ $ cd ..
 $ rm course_file.txt
 $ rm -r folder/
 ```
-::::::::::::::::::::::::::::::::::::: challenge 
+::::::::::::::::::::::::::::::::::::: challenge
 
 ## Challenge 1: Order the sequence of events from the commands above
 
@@ -124,8 +124,8 @@ $ rm -r folder/
 
 ::::::::::::::::::::::::::::::::::::: callout
 
-- Try combining commands using the pipe operator (|) to create more complex workflows.
-- Try redirecting output to new files using the greater-than symbol (>).
+- You can combine commands using the pipe operator (|) to create more complex workflows.
+- You can redirect the standard output from one command to new files using the greater-than symbol (>). Example: `head -n 5 table.tsv > top5.tsv` will create a new file named top5.tsv containing the first 5 lines of table.tsv.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
