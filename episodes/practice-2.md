@@ -17,7 +17,7 @@ exercises: 10 # exercise time in minutes
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Hands-on Practice with BASH
+## Hands-on Practice with BASH (part 2)
 
 Based on your previous exercises, use the same terminal from the Google Colab platform to test your knowledge on BASH commands. Start by typing `cd sample_data` to access the folder that contains the files you'll be using during this training. Scroll down to find a series of exercises which will demand choosing for specific flags to generate the desired output.
 But first, you'll need the same table.tsv generated in the previous exercises to complete these challenges. If you don't have it anymore, you can recreate it by following the steps in the previous episode.

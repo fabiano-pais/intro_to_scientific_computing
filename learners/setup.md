@@ -2,9 +2,9 @@
 title: Setup
 ---
 
-Instructions to complete the Introductions to Scientific Computing live in this document. 
+Instructions to complete the Introduction to Scientific Computing course live in this document.
 Please follow the steps below to set up your environment before starting the lessons.
-We will start with a brief introductions to Scientific Computing, followed by three practice sessions to get you familiar with BASH commands.
+We will start with a brief introduction to our course, followed by hands-on sessions to get you familiar with BASH commands.
 
 ## Environment and datasets
 

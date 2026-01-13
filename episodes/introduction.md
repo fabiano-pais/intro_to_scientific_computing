@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Scientific Computing"
+title: "Everything you need to know before getting started"
 teaching: 10 # teaching time in minutes
 exercises: 2 # exercise time in minutes
 ---
@@ -17,7 +17,7 @@ exercises: 2 # exercise time in minutes
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Introduction to Scientific Computing
+## Setting the stage
 
 Scientific computing is all about solving problems using computers. The complexity of the problem might require proficiency in one or more programing languages. You may need to be able to write Python or R scripts at some point, but you'll definetly need to know BASH for a start. BASH is a very simple programming language, or a shell actually, and one that can connect you to a high performance computer (HPC). 
 In order to learn BASH, you'll need to work with a command-line application, such as a terminal, to get the most from BASH.
