@@ -1,113 +1,79 @@
 ---
-title: "Using Markdown"
+title: "Introduction to Scientific Computing"
 teaching: 10 # teaching time in minutes
 exercises: 2 # exercise time in minutes
 ---
 
-:::::::::::::::::::::::::::::::::::::: questions 
+:::::::::::::::::::::::::::::::::::::: questions
 
-- How do you write a lesson using Markdown and `{sandpaper}`?
+- What is scientific computing?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain how to use markdown with The Carpentries Workbench
-- Demonstrate how to include pieces of code, figures, and nested challenge blocks
+- Are you familiar with programming languages?
+- Do you have experience with command-line applications?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Introduction
+## Introduction to Scientific Computing
 
-This is a lesson created via The Carpentries Workbench. It is written in
-[Pandoc-flavored Markdown](https://pandoc.org/MANUAL.html) for static files and
-[R Markdown][r-markdown] for dynamic files that can render code into output. 
-Please refer to the [Introduction to The Carpentries 
-Workbench](https://carpentries.github.io/sandpaper-docs/) for full documentation.
+Scientific computing is all about solving problems using computers. The complexity of the problem might require proficiency in one or more programing languages. You may need to be able to write Python or R scripts at some point, but you'll definetly need to know BASH for a start. BASH is a very simple programming language, or a shell actually, and one that can connect you to a high performance computer (HPC). 
+In order to learn BASH, you'll need to work with a command-line application, such as a terminal, to get the most from BASH.
 
-What you need to know is that there are three sections required for a valid
-Carpentries lesson:
-
- 1. `questions` are displayed at the beginning of the episode to prime the
-    learner for the content.
- 2. `objectives` are the learning objectives for an episode displayed with
-    the questions.
- 3. `keypoints` are displayed at the end of the episode to reinforce the
-    objectives.
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
-
-Inline instructor notes can help inform instructors of timing challenges
-associated with the lessons. They appear in the "Instructor View"
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::: challenge 
-
-## Challenge 1: Can you do it?
-
-What is the output of this command?
-
-```r
-paste("Can", "I", "learn", "how", "to", "do", "this?", "Yes!")
-```
-
-:::::::::::::::::::::::: solution 
-
-## Output
- 
-```output
-[1] "Can I learn how to do this? Yes!"
-```
-
-:::::::::::::::::::::::::::::::::
-
-
-## Challenge 2: how do you nest solutions within challenge blocks?
-
-:::::::::::::::::::::::: solution 
-
-You can add a line with at least three colons and a `solution` tag.
-
-:::::::::::::::::::::::::::::::::
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-## Figures
-
-You can use standard markdown for static figures with the following syntax:
-
-`![optional caption that appears below the figure](figure url){alt='alt text for
-accessibility purposes'}`
-
-![You belong in The Carpentries!](https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg){alt='Blue Carpentries hex person logo with no text.'}
+Here, you'll learn the most important commands in BASH so you can carry on your jobs. This will be achieved by working through a series of exercises using a terminal within Google Colab as the main interface.  You'll be given instructions on how to open a terminal within Google Colab at the next episode. However, if you don't have a Google account yet, please create one before continuing.
 
 ::::::::::::::::::::::::::::::::::::: callout
 
-Callout sections can highlight information.
+Before starting, you need to know what is a Terminal, a Shell and BASH.
 
-They are sometimes used to emphasise particularly important points
-but are also used in some lessons to present "asides": 
-content that is not central to the narrative of the lesson,
-e.g. by providing the answer to a commonly-asked question.
+We provide a few basic definitions to the above, but we reconmend reading through out further documentation.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+## Terminal
 
-## Math
+It's a program that allows you to communicate with your computer throught a commnand-line environment. So, basically, you'll interact with the computer only by entering commands to perform specific tasks. It's mainly operated throughout the keyboard, altough there are Terminals that provide a small interaction with the mouse.
 
-One of our episodes contains $\LaTeX$ equations when describing how to create
-dynamic reports with {knitr}, so we now use mathjax to describe this:
+Many Terminals are availables for each Operating System (OS). We strongly suggest VSCode (https://code.visualstudio.com), which is freely available to all OS. Yoy may also like Warp (https://www.warp.dev/j).
 
-`$\alpha = \dfrac{1}{(1 - \beta)^2}$` becomes: $\alpha = \dfrac{1}{(1 - \beta)^2}$
+You'll also use a Terminal to access a remote machine, i.e. an HPC. An HPC can provide more computer cores and memory for performing advanced tasks for complex data analysis.
 
-Cool, right?
+## Shell
 
-::::::::::::::::::::::::::::::::::::: keypoints 
+Shell is a part of the software that interprets the commands entered via the keyboard. BASH is (probably) the most popular Shell, but there are others, such as ZSH and PowerShell. You can switch between Shells, but you need to be aware that some commands may differ slightly between them. Confirguration files are also different, and therefore cannot just been shared between them.
 
-- Use `.md` files for episodes when you want static content
-- Use `.Rmd` files for episodes when you need to generate output
-- Run `sandpaper::check_lesson()` to identify any issues with your lesson
-- Run `sandpaper::build_lesson()` to preview your lesson locally
+::::::::::::::::::::::::::::::::::::: challenge 
+
+## Challenge 1: Can you link the Shells bellow to its native Operating System?
+
+Each the following Operating Systems has an embeded main shell
+
+MacOS, Linux, Windows.
+
+Which is the main Shell for each?
+
+:::::::::::::::::::::::: solution
+
+## Output
+
+ZSH is the main MacOS shell; 
+BASH for Linux; 
+Powershell for Windows.
+
+::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+## BASH
+
+BASH was developed by Brian Fox in 1988, and first released in 1989. Like any programming language, it can be used to automate tasks, and that's a powerfull thing. BASH supports a wide range of functionalities, such as using variables. Since it was one of the first shells available, it has become the default shell on most Linux distributions.
+
+::::::::::::::::::::::::::::::::::::: callout
+
+## Swithing between Shells
+
+It's entirely possible to swith between different shells. For example, if you are using ZSH and want to switch to BASH on a macOS, you can simply type `bash` in the terminal. To return to ZSH, type `zsh`. There are other shells available, such as `fish`(https://fishshell.com) for example. Fish is not POSIX compliant, but it has a lot of user-friendly features and it's quite similar to BASH.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
