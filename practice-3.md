@@ -17,7 +17,7 @@ exercises: 6 # exercise time in minutes
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Advanced BASH
+## Advanced BASH Scripting
 
 Advanced userers of BASH often make use of loops to automate repetitive tasks. This can save time and reduce the risk of errors. Mastering loops is an essential skill for anyone looking to become proficient in BASH scripting. Also, experienced users often combine scripts with assigned variables to make their code more dynamic and adaptable to different situations.
 Loops are no different than in other programming languades, and are used to repeat a specific block of code a certain number of times or until a particular condition is met. They are particularly useful when you need to perform the same operation on multiple files or datasets.
