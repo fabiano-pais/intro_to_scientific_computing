@@ -30,13 +30,6 @@ The first thing you must know is that, in general, there are two key elements re
 
 Optional flags that modify the behavior of the program. The available flags for each program can be accessed by typing `name-of-program --help`. Try it with the commands you'll learn below.
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
-
-Inline instructor notes can help inform instructors of timing challenges
-associated with the lessons. They appear in the "Instructor View"
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
 ## Commands
 
 Learn the commands below as they're the most used ones in BASH:

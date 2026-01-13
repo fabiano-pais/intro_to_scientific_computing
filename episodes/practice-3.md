@@ -53,13 +53,6 @@ echo "New file detected!"
 Based on the examples above, scroll down to find a last series of exercises that will help you practice loops in BASH.
 You'll need to use all the knowledge you've acquired so far (and probably "some" online search), to complete these last challenges.
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
-
-Inline instructor notes can help inform instructors of timing challenges
-associated with the lessons. They appear in the "Instructor View"
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
 ## Exercises 4
 Write a command line to execute what's asked in each challenge below. Right down your answer before opening the output cell to check which of your command were correct. Don't worry if your answer is different from the solution provided. Again, getting the correct output is what matters the most.
 
