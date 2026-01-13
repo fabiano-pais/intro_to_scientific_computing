@@ -1,27 +1,26 @@
 ---
-title: "Intermediate practice with BASH"
+title: "More hands-on practice with BASH"
 teaching: 2 # teaching time in minutes
 exercises: 10 # exercise time in minutes
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- Have you successfully completed the previous BASH practice exercises?
+- Have you successfully completed the previous BASH exercises?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Practice more BASH commands based on previous knowledge
+- Test your knowledge on BASH commands in a terminal environment within Google Colab
 - Reinforce understanding of BASH command structure
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Hands-on Practice with BASH
 
-Based on your previous knowledge from the introduction to BASH, please use again the same terminal from the Google Colab platform.
-Then, scroll down to find a series of exercises that will help you practice more BASH commands. Each exercise demands choosing for specific flags and understanding the output of each command.
-You'll need the table.tsv generated in the previous exercises to complete these challenges. If you don't have it anymore, you can recreate it by following the steps in the previous episode.
+Based on your previous exercises, use the same terminal from the Google Colab platform to test your knowledge on BASH commands. Start by typing `cd sample_data` to access the folder that contains the files you'll be using during this training. Scroll down to find a series of exercises which will demand choosing for specific flags to generate the desired output.
+But first, you'll need the same table.tsv generated in the previous exercises to complete these challenges. If you don't have it anymore, you can recreate it by following the steps in the previous episode.
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
 
@@ -42,6 +41,7 @@ Write a command line to execute what's asked in each challenge below. Right down
 - Select only lines which do not show Putative in the annotation column of the file `table.tsv`, collect the third column and append the output to the previously created `annotations.txt` file.
 - Print the first 5 lines of the file `table.tsv` in reverse order.
 - Using `awk`, print `table.tsv` content with columns 3, 2 and 1 in this order and as a tab separated value.
+- Print the first 3 lines of the file `table.tsv` starting from line 7 (i.e., lines 7, 8 and 9) usind `sed`.
 
 :::::::::::::::::::::::: solution
 
@@ -53,6 +53,7 @@ $ wc -l table.tsv
 $ grep -v "Putative" table.tsv | cut -f 3 >> annotations.txt
 $ head -n 5 table.tsv | tac
 $ awk -v OFS='\t' '{print $3, $2, $1}' table.tsv
+$ sed -n '7,9p' table.tsv
 
 ```
 

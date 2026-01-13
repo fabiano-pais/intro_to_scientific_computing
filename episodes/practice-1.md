@@ -20,16 +20,15 @@ exercises: 10 # exercise time in minutes
 ## Hands-on Practice with BASH
 
 Open your Colab account (https://colab.research.google.com). Colab is not a separate service, but rather a part of your Google account. Once opened, click at the "Terminal" icon at the lower left sidebar to open a terminal window within Colab. This terminal will act as your BASH environment where you'll be able to practice the commands you'll learn here.
-Start by typing `cd sample_data` to access a folder that already contains some files you'll be using to practice.
 
-Scroll down to find a series of exercises that will help you practice the most important BASH commands. The exercises are preceeded by a brief description of the commands you'll be using, along with its syntax and an example.
+Start by typing `cd sample_data` to access a folder that already contains some files you'll be using during our training. Then, scroll down to find a series of exercises that will help you practice the most important BASH commands. Observe the commands you'll be using, along with its syntax at each example.
 
-The first thing you need to know is that, in general, there are three key elements required to execute a BASH command:
+The first thing you must know is that, in general, there are two key elements required to execute a BASH command:
 
- 1. The program which will execute an specific task.
- 2. The arguments that can change the output of a program by modifying the execution of the program.
- 3. The file or input data the program will work on.
-The available options for each program can be accessed by typing `name-of-program --help`.
+ 1. The program, which will execute an specific task;
+ 2. The file or input data the program will work on;
+
+Optional flags that modify the behavior of the program. The available flags for each program can be accessed by typing `name-of-program --help`. Try it with the commands you'll learn below.
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
 
@@ -73,7 +72,7 @@ Learn the commands below as they're the most used ones in BASH:
 ## Exercises
 
 ### Exercise 1
-Open your terminal (in jupyter notebook) and execute the commands below to practice BASH commands:
+Open your terminal (in jupyter notebook) and execute the commands below to practice BASH commands. Write down the output of each coommand as we will check it at the end of this exercise.
 ```bash
 $ mkdir course_folder
 $ cd course_folder
@@ -131,8 +130,9 @@ $ rm -r folder/
 
 ### Exercise 2
 
-In order to run the next exercise, we'll use the same terminal from the previous exercise. Make sure you're in the `sample_data` where you started before. If not, type `cd ~/sample_data` to get back to it.
-Create a new file named table.tsv and paste the content below into it. In order to create and edit the file, you can use `vim table.tsv` command. Copy the data below (don't forget the header) and past the content at the terminal, press `ESC`, then `:`, then `wq` and `ENTER` to save and exit vim editor.
+In order to run the next exercise, make sure you're in the `sample_data` folder where you started before. If not, type `cd ~/sample_data` to get back to it.
+Create a new file named table.tsv and paste the content below into it.
+In order to create and edit the file, you can use `vim table.tsv` command. Copy the data below (don't forget the header) and past the content at the terminal, press `ESC`, then `:`, then `wq` and `ENTER` to save and exit vim editor.
 
 ```plaintext
 GeneID	Expression	Annotation
@@ -149,7 +149,7 @@ Gene010	42.7	Putative regulator
 Gene011	29.3	Chaperone
 Gene012	53.8	Metabolic enzyme
 ```
-And here are the commands to practice with this new file:
+And here are the commands to practice with this new file. Remember to write down the output of each command as we will check it at the end of this exercise.
 ```bash
 $ wc table.tsv
 $ head table.tsv

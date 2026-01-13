@@ -6,22 +6,21 @@ exercises: 6 # exercise time in minutes
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- Have you successfully completed the intermediate BASH practice exercises?
+- Have you successfully completed the previous BASH practice exercises?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Practice more advanced BASH commands
-- Reinforce understanding of BASH loops 
+- Practice more advanced BASH commands with loops
+- Reinforce understanding of BASH scripting
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Advanced BASH
 
-Advanced user of BASH often make use of loops to automate repetitive tasks. This can save time and reduce the risk of errors. Mastering loops is an essential skill for anyone looking to become proficient in BASH scripting.
-Also, experienced users often combine scripts with assigned variables to make their code more dynamic and adaptable to different situations.
-Loops are used to repeat a specific block of code a certain number of times or until a particular condition is met. They are particularly useful when you need to perform the same operation on multiple files or datasets.
+Advanced userers of BASH often make use of loops to automate repetitive tasks. This can save time and reduce the risk of errors. Mastering loops is an essential skill for anyone looking to become proficient in BASH scripting. Also, experienced users often combine scripts with assigned variables to make their code more dynamic and adaptable to different situations.
+Loops are no different than in other programming languades, and are used to repeat a specific block of code a certain number of times or until a particular condition is met. They are particularly useful when you need to perform the same operation on multiple files or datasets.
 There are two main types of loops in BASH: `for` loops and `while` loops. We've set two examples below to illustrate how each loop works. Open the terminal from the Google Colab plarform first to try them out.
 
 ### For Loops
@@ -51,8 +50,8 @@ echo "New file detected!"
 
 ## Bash Advanced Practice
 
-Based on the examples above, scroll down to find the last series of exercises that will help you practice loops in BASH.
-You'll need to use all the knowledge you've acquired so far (and probably online search), to complete these last challenges.
+Based on the examples above, scroll down to find a last series of exercises that will help you practice loops in BASH.
+You'll need to use all the knowledge you've acquired so far (and probably "some" online search), to complete these last challenges.
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
 
@@ -69,7 +68,7 @@ Write a command line to execute what's asked in each challenge below. Right down
 ## Challenge 4:
 
 - Using a `for` loop, create a new file for each CSV file in the current directory that contains only the first 10 lines of each file. Name the new files with the original filename appended with `_top10.csv`.
-- Using a `while` loop, count the numbers (separed by commas) in the mnist_test.csv file, from the fist row onwards, until it reaches 100000. Then print the total number of lines counted to reach that number. 
+- Using a `while` loop, count the numbers (separed by commas) in the mnist_test.csv file, from the fist row onwards, until it reaches 100000. Then print the total number of lines counted to reach that number. You may need to use a nested loop for this challenge.
 
 :::::::::::::::::::::::: solution
 
@@ -99,7 +98,7 @@ done < mnist_test.csv
 
 ::::::::::::::::::::::::::::::::::::: callout
 
-- Congratulations! You've completed now a range of exercices from beginner to a more advanced level in BASH. You should now be comfortable using BASH commands to navigate the file system, edit files, and perform basic data processing tasks. Keep practicing these commands to reinforce your skills and explore more advanced features of BASH as you progress in your scientific computing journey.
+- Congratulations! You've completed now a range of exercices from beginner to a more advanced level in BASH. You should now be comfortable using BASH commands to navigate the file system, edit files, and perform different data processing tasks. Keep practicing these commands to reinforce your skills and explore more advanced features of BASH as you progress in your scientific computing journey.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
