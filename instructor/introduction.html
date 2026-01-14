@@ -302,7 +302,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Everything you need to know before getting started</h1>
-        <p>Last updated on 2026-01-13 |
+        <p>Last updated on 2026-01-14 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -360,10 +360,9 @@ yet, please create one before continuing.</p>
 <span class="callout-header">Callout</span>
 <div class="callout-inner">
 <div class="callout-content">
-<p>Before starting, you need to know what is a Terminal, a Shell and
-BASH.</p>
+<p>Do you know what is a Terminal, a Shell and BASH?</p>
 <p>We provide a few basic definitions to the above, but we reconmend
-reading through out further documentation.</p>
+reading additional documentation (widely available online).</p>
 </div>
 </div>
 </div>
@@ -373,19 +372,26 @@ throught a commnand-line environment. So, basically, you’ll interact
 with the computer only by entering commands to perform specific tasks.
 It’s mainly operated throughout the keyboard, altough there are
 Terminals that provide a small interaction with the mouse.</p>
-<p>Many Terminals are availables for each Operating System (OS). We
-strongly suggest VSCode (<a href="https://code.visualstudio.com" class="external-link uri">https://code.visualstudio.com</a>), which is freely
+<p>Although most Operating Systems (OS) provide beatifull graphical user
+interfaces (GUIs), Terminals are still widely used by programmers and
+data scientists. Terminals are very powerfull, and once you get used to
+them, you’ll be able to perform tasks much faster than using a GUI. If
+you need to access a remote machine, i.e. an HPC, you will mostlikely do
+it using a Terminal. HPCs can provide users with more computer cores and
+memory for performing advanced tasks for complex data analysis.</p>
+<p>Many Terminals are availables for each OS. We strongly suggest VSCode
+(<a href="https://code.visualstudio.com" class="external-link uri">https://code.visualstudio.com</a>), which is freely
 available to all OS. Yoy may also like Warp (<a href="https://www.warp.dev/j" class="external-link uri">https://www.warp.dev/j</a>).</p>
-<p>You’ll also use a Terminal to access a remote machine, i.e. an HPC.
-An HPC can provide more computer cores and memory for performing
-advanced tasks for complex data analysis.</p>
 </section><section><h2 class="section-heading" id="shell">Shell<a class="anchor" aria-label="anchor" href="#shell"></a></h2>
 <hr class="half-width"><p>Shell is a part of the software that interprets the commands entered
 via the keyboard. BASH is (probably) the most popular Shell, but there
 are others, such as ZSH and PowerShell. You can switch between Shells,
 but you need to be aware that some commands may differ slightly between
 them. Confirguration files are also different, and therefore cannot just
-been shared between them.</p>
+been shared between them. Shells that are POSIX-compliant (such as BASH
+and ZSH) share a lot of similarities, so most commands will work in both
+shells. PowerShell is not POSIX compliant, but it’s still widely
+used.</p>
 <div id="challenge-1-can-you-link-the-shells-bellow-to-its-native-operating-system" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -410,8 +416,8 @@ its native Operating System?</h3>
 </button>
 <div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
-<p>ZSH is the main MacOS shell; BASH for Linux; Powershell for
-Windows.</p>
+<p>ZSH is the main MacOS shell; BASH is the main one for Linux;
+PowerShell is the Windows main shell.</p>
 </div>
 </div>
 </div>
@@ -419,9 +425,14 @@ Windows.</p>
 </section><section><h2 class="section-heading" id="bash">BASH<a class="anchor" aria-label="anchor" href="#bash"></a></h2>
 <hr class="half-width"><p>BASH was developed by Brian Fox in 1988, and first released in 1989.
 Like any programming language, it can be used to automate tasks, and
-that’s a powerfull thing. BASH supports a wide range of functionalities,
-such as using variables. Since it was one of the first shells available,
-it has become the default shell on most Linux distributions.</p>
+that’s a powerfull thing. Since it was one of the first programming
+languages ported by Linus Torvalds to Linux, it has become the default
+shell on most Linux distributions. BASH supports a wide range of
+functionalities, such as using variables and arrays as data structures.
+By default, BASH reads user code one line at a time, but it can also
+read scripts containing multiple lines of code. BASH scripts are plain
+text files with a <code>.sh</code> extension that can be executed in the
+terminal in a non-interactive way and whithout user intervention.</p>
 <div id="swithing-between-shells" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -503,9 +514,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://carpentries.github.io/workbench-template-md/instructor/introduction.html",
   "identifier": "https://carpentries.github.io/workbench-template-md/instructor/introduction.html",
-  "dateCreated": "2026-01-13",
-  "dateModified": "2026-01-13",
-  "datePublished": "2026-01-13"
+  "dateCreated": "2026-01-14",
+  "dateModified": "2026-01-14",
+  "datePublished": "2026-01-14"
 }
 
   </script><script>
