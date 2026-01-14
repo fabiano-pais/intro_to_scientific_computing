@@ -21,7 +21,7 @@ exercises: 10 # exercise time in minutes
 
 Open your Colab account (https://colab.research.google.com). Colab is not a separate service, but rather a part of your Google account. Once opened, click at the "Terminal" icon at the lower left sidebar to open a terminal window within Colab. This terminal will act as your BASH environment where you'll be able to practice the commands you'll learn here.
 
-Start by typing `cd sample_data` to access a folder that already contains some files you'll be using during our training. Then, scroll down to find a series of exercises that will help you practice the most important BASH commands. Observe the commands you'll be using, along with its syntax at each example.
+Start by typing `cd sample_data` to access a folder that already contains some files you'll be using during our training. Then, scroll down here to find a series of exercises that will help you practice the most important BASH commands. Observe the commands you'll be using, along with its syntax at each example.
 
 The first thing you must know is that, in general, there are two key elements required to execute a BASH command:
 
@@ -49,7 +49,7 @@ Learn the commands below as they're the most used ones in BASH:
 - `sort` – organize your data by specific order
 - `cut` – print selected columns from a file
 - `grep` – used to search for patterns in a file
-- `paste` – merges the content of one file with a second file starting from the right end of each row at the second file
+- `paste` – merges the content of one file with a second file side-by-sing horizontally
 - `cat` – show the content of a file
 - `sed` – stream editor for filtering and transforming text
 - `awk` – a programming language for pattern scanning and processing
@@ -65,7 +65,7 @@ Learn the commands below as they're the most used ones in BASH:
 ## Exercises
 
 ### Exercise 1
-Open your terminal (in jupyter notebook) and execute the commands below to practice BASH commands. Write down the output of each coommand as we will check it at the end of this exercise.
+Open your terminal and execute the commands below to practice BASH commands. Write down the output of each coommand as we will check it at the end of this exercise.
 ```bash
 $ mkdir course_folder
 $ cd course_folder
