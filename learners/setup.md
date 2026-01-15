@@ -17,8 +17,8 @@ You will be using Google Colab to complete the exercises in this lesson. Colab p
 To access the terminal in Google Colab, follow these steps:
 1. Go to [Google Colab](https://colab.research.google.com) and sign in with your Google account. If you don't have a Google account, you'll need to create one.
 2. Once you're signed in, click on the "Terminal" icon located in the lower left sidebar. This will open a terminal window within Colab.
-3. In the terminal, type `cd sample_data` to navigate to a folder that contains some files you'll be using for practice.
-You are now set up and ready to start learning BASH commands in the terminal environment provided by Google Colab!
+3. In the terminal, type `cd sample_data` followed by an enter to move to a folder that contains some files you'll be using for practice.
+You are now ready to start learning BASH commands in the terminal environment provided by Google Colab!
 
 ## During the lesson
 
@@ -26,6 +26,6 @@ You are now set up and ready to start learning BASH commands in the terminal env
 
 ### Need support?
 
-Our team will be available during the lesson to help you with any issues you may encounter. If you have questions or need assistance, please don't hesitate to reach out.
+Our team will be available during the training to help you with any issues you may encounter. If you have questions or need assistance, please don't hesitate to reach out.
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::
