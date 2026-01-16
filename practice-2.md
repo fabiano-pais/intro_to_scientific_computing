@@ -35,6 +35,8 @@ Write a command line to execute what's asked in each challenge below. Right down
 - Print the first 5 lines of the file `table.tsv` in reverse order.
 - Using `awk`, print `table.tsv` content with columns 3, 2 and 1 in this order and as a tab separated value.
 - Print the first 3 lines of the file `table.tsv` starting from line 7 (i.e., lines 7, 8 and 9) usind `sed`.
+- Sort the file `table.tsv` based on the values in the second column in descending order and print the first 5 lines of the sorted output.
+- Replace only the first occurrences of the word "gene" with "GENE" in the file `table.tsv` and display the modified content whilst changing the original file.
 
 :::::::::::::::::::::::: solution
 
@@ -47,7 +49,8 @@ $ grep -v "Putative" table.tsv | cut -f 3 >> annotations.txt
 $ head -n 5 table.tsv | tac
 $ awk -v OFS='\t' '{print $3, $2, $1}' table.tsv
 $ sed -n '7,9p' table.tsv
-
+$ sort -k2 -nr table.tsv | head -5
+$ sed -i 's/Gene/GENE/1' table.tsv && cat table.tsv
 ```
 
 ::::::::::::::::::::::::::::::::::
