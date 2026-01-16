@@ -20,8 +20,10 @@ exercises: 6 # exercise time in minutes
 ## Advanced BASH Scripting
 
 Advanced userers of BASH often make use of loops to automate repetitive tasks. This can save time and reduce the risk of errors. Mastering loops is an essential skill for anyone looking to become proficient in BASH scripting. Also, experienced users often combine scripts with assigned variables to make their code more dynamic and adaptable to different situations.
-Loops are no different than in other programming languades, and are used to repeat a specific block of code a certain number of times or until a particular condition is met. They are particularly useful when you need to perform the same operation on multiple files or datasets.
-There are two main types of loops in BASH: `for` loops and `while` loops. We've set two examples below to illustrate how each loop works. Open the terminal from the Google Colab plarform first to try them out.
+Loops in BASH are no different than in other programming languages, and are used to repeat a specific block of code a certain number of times or until a particular condition is met. They are particularly useful when you need to perform the same operation on multiple files or datasets.
+There are two main types of loops in BASH: `for` loops and `while` loops.
+Also, conditionals are often used by advaced users to control the flow of their scripts based on certain conditions. The most common conditional statements in BASH are `if`, `elif`, and `else`.
+We've set a few examples below to illustrate how loops and conditionals work. Open the terminal from the Google Colab plarform first to try them out.
 
 ### For Loops
 A `for` loop iterates over a list of items, executing a block of code for each item in the list. Here, we're going to add a header line to multiple CSV files that match a specific pattern (`*test.csv`) and generate a new file with this header.
@@ -47,6 +49,17 @@ while [ "$(ls -A | wc -l)" -le "$initial_count" ]; do
     sleep 5
 done
 echo "New file detected!"
+```
+
+### If Conditionals
+An `if` statement allows you to execute a block of code only if a specified condition is true. Here's an example that checks if a file named `data.csv` exists in the current directory. If the file exists, it prints a message indicating that the file was found; otherwise, it prints a message indicating that the file was not found.
+
+```bash
+if [ -f data.csv ]; then
+    echo "File data.csv found."
+else
+    echo "File data.csv not found."
+fi
 ```
 
 ## Bash Advanced Practice
@@ -83,8 +96,7 @@ while IFS=, read -r -a nums; do
     fi;
   done;
 done < mnist_test.csv
-# Our suggested approach makes use of a `for` loop inside a `while` loop (nested loop), and also a `if` conditional statement. The `while` loop reads each line of the mnist_test.csv file, and the `for` loop iterates over each number in the line, adding it to the sum until the condition `if` (which checks when the sum reaches 100000) is met. All the above after setting two variables at the begining: `sum` to keep track of the total sum, and `lines` to count the number of lines processed.
-# 
+# Our suggested approach makes use of a `for` loop inside a `while` loop (nested loop), and also a `if` conditional statement. The `while` loop reads each line of the mnist_test.csv file, and the `for` loop iterates over each number in the line, adding it to the sum until the condition `if` (which checks when the sum reaches 100000) is met. Observe that we break out of both loops using `break 2` when the condition is satisfied, and 'fi` to close the `if` statement. All the above after setting two variables at the begining: `sum` to keep track of the total sum, and `lines` to count the number of lines processed.
 ```
 
 ::::::::::::::::::::::::::::::::::

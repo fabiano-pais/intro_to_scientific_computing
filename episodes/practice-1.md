@@ -129,18 +129,18 @@ In order to create and edit the file, you can use `vim table.tsv` command. Copy 
 
 ```plaintext
 GeneID	Expression	Annotation
-Gene001	23.5	Putative kinase
-Gene002	45.2	Putative phosphatase
-Gene003	12.8	Transcription factor
-Gene004	67.1	Membrane protein
-Gene005	34.6	Putative transporter
-Gene006	78.9	Structural protein
+Gene001	23.5	Putative Kinase Gene
+Gene002	45.2	Putative Phosphatase Gene
+Gene003	12.8	Transcription Factor
+Gene004	67.1	Membrane Protein
+Gene005	34.6	Putative Transporter Gene
+Gene006	78.9	Structural Protein
 Gene007	56.3	Enzyme
-Gene008	89.0	Signal transducer
+Gene008	89.0	Signal Transducer
 Gene009	15.4	Receptor
-Gene010	42.7	Putative regulator
+Gene010	42.7	Putative Regulator Gene
 Gene011	29.3	Chaperone
-Gene012	53.8	Metabolic enzyme
+Gene012	53.8	Metabolic Enzyme
 ```
 And here are the commands to practice with this new file. Remember to write down the output of each command as we will check it at the end of this exercise.
 ```bash
@@ -148,10 +148,10 @@ $ wc table.tsv
 $ head table.tsv
 $ tail table.tsv
 $ more table.tsv
-$ sort table.tsv
-$ cut -f 2 table.tsv | sort -n
+$ sort -k3 table.tsv
+$ cut -f 2 table.tsv
 $ cut -f 3 table.tsv > annotations.txt
-$ grep 'Putative' lipids.txt
+$ grep 'Putative' lipids.txt | head -n 5
 $ sed 's/Putative/Unknown/g' table.tsv
 $ paste table.tsv annotations.txt > merged.tsv
 ````
@@ -159,16 +159,16 @@ $ paste table.tsv annotations.txt > merged.tsv
 
 ## Challenge 2: Order the sequence of events from the commands above
 
-- Print only the second column from the file in a numeric order.
+- Print only the second column from the file.
 - Print the last 10 lines.
 - Print the first 10 lines.
 - Copy the content of the third column to a new file named annotations.txt.
 - Get the counts of characters, words and lines from your file.
 - Search the occurrence of a specific pattern "putative" at the file.
 - Merge the content of both files, table.tsv and annotations.txt, into a new file named merged.tsv.
-- Replace the word "Putative" with "Unknown" throughout the file.
-- Show the content of the whole file progressively; `cat` can also be used to show the content of a file but it does not allow progressive visualization.
-- Print the file in an alfabetically ordered fashion by the element at the first column on each line
+- Replace the word "Putative" with "Unknown" throughout the file and print the first 5 lines only.
+- Show the content of the whole file progressively; `cat` may also be used to show the content of a file but it does not allow progressive visualization.
+- Print the file in an alfabetically ordered fashion by the element at the third column on each line
 
 :::::::::::::::::::::::: solution
 
@@ -178,11 +178,11 @@ $ paste table.tsv annotations.txt > merged.tsv
 2. Print the first 10 lines.
 3. Print the last 10 lines.
 4. Show the content of the whole file progressively.
-5. Print the file in an ordered fashion by element at the first column on each line
-6. Print only the second column from the file in a numeric order.
+5. Print the file in an alfabetically ordered fashion by the element at the third column on each line
+6. Print only the second column from the file.
 7. Copy the content of the third column to a new file named annotations.txt.
 8. Search the occurrence of a specific pattern "putative" at the file.
-9. Replace the word "Putative" with "Unknown" throughout the file.
+9. Replace the word "Putative" with "Unknown" throughout the file and print the first 5 lines only.
 10. Merge the content of both files, table.tsv and annotations.txt, into a new file named merged.tsv.
 
 ::::::::::::::::::::::::::::::::::
