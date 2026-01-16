@@ -301,7 +301,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Hands-on Practice with BASH</h1>
-        <p>Last updated on 2026-01-14 |
+        <p>Last updated on 2026-01-16 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/practice-1.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -517,18 +517,18 @@ data below (don’t forget the header) and past the content at the
 terminal, press <code>ESC</code>, then <code>:</code>, then
 <code>wq</code> and <code>ENTER</code> to save and exit vim editor.</p>
 <pre class="plaintext"><code>GeneID	Expression	Annotation
-Gene001	23.5	Putative kinase
-Gene002	45.2	Putative phosphatase
-Gene003	12.8	Transcription factor
-Gene004	67.1	Membrane protein
-Gene005	34.6	Putative transporter
-Gene006	78.9	Structural protein
+Gene001	23.5	Putative Kinase Gene
+Gene002	45.2	Putative Phosphatase Gene
+Gene003	12.8	Transcription Factor
+Gene004	67.1	Membrane Protein
+Gene005	34.6	Putative Transporter Gene
+Gene006	78.9	Structural Protein
 Gene007	56.3	Enzyme
-Gene008	89.0	Signal transducer
+Gene008	89.0	Signal Transducer
 Gene009	15.4	Receptor
-Gene010	42.7	Putative regulator
+Gene010	42.7	Putative Regulator Gene
 Gene011	29.3	Chaperone
-Gene012	53.8	Metabolic enzyme</code></pre>
+Gene012	53.8	Metabolic Enzyme</code></pre>
 <p>And here are the commands to practice with this new file. Remember to
 write down the output of each command as we will check it at the end of
 this exercise.</p>
@@ -539,10 +539,10 @@ this exercise.</p>
 <span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="ex">$</span> head table.tsv</span>
 <span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="ex">$</span> tail table.tsv</span>
 <span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="ex">$</span> more table.tsv</span>
-<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="ex">$</span> sort table.tsv</span>
-<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a><span class="ex">$</span> cut <span class="at">-f</span> 2 table.tsv <span class="kw">|</span> <span class="fu">sort</span> <span class="at">-n</span></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="ex">$</span> sort <span class="at">-k3</span> table.tsv</span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a><span class="ex">$</span> cut <span class="at">-f</span> 2 table.tsv</span>
 <span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a><span class="ex">$</span> cut <span class="at">-f</span> 3 table.tsv <span class="op">&gt;</span> annotations.txt</span>
-<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a><span class="ex">$</span> grep <span class="st">'Putative'</span> lipids.txt</span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a><span class="ex">$</span> grep <span class="st">'Putative'</span> lipids.txt <span class="kw">|</span> <span class="fu">head</span> <span class="at">-n</span> 5</span>
 <span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a><span class="ex">$</span> sed <span class="st">'s/Putative/Unknown/g'</span> table.tsv</span>
 <span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a><span class="ex">$</span> paste table.tsv annotations.txt <span class="op">&gt;</span> merged.tsv</span></code></pre>
 </div>
@@ -555,7 +555,7 @@ this exercise.</p>
 <h3 class="callout-title">Challenge 2: Order the sequence of events from
 the commands above</h3>
 <div class="callout-content">
-<ul><li>Print only the second column from the file in a numeric order.</li>
+<ul><li>Print only the second column from the file.</li>
 <li>Print the last 10 lines.</li>
 <li>Print the first 10 lines.</li>
 <li>Copy the content of the third column to a new file named
@@ -565,12 +565,13 @@ annotations.txt.</li>
 file.</li>
 <li>Merge the content of both files, table.tsv and annotations.txt, into
 a new file named merged.tsv.</li>
-<li>Replace the word “Putative” with “Unknown” throughout the file.</li>
+<li>Replace the word “Putative” with “Unknown” throughout the file and
+print the first 5 lines only.</li>
 <li>Show the content of the whole file progressively; <code>cat</code>
-can also be used to show the content of a file but it does not allow
+may also be used to show the content of a file but it does not allow
 progressive visualization.</li>
 <li>Print the file in an alfabetically ordered fashion by the element at
-the first column on each line</li>
+the third column on each line</li>
 </ul></div>
 </div>
 </div>
@@ -587,14 +588,15 @@ the first column on each line</li>
 <li>Print the first 10 lines.</li>
 <li>Print the last 10 lines.</li>
 <li>Show the content of the whole file progressively.</li>
-<li>Print the file in an ordered fashion by element at the first column
-on each line</li>
-<li>Print only the second column from the file in a numeric order.</li>
+<li>Print the file in an alfabetically ordered fashion by the element at
+the third column on each line</li>
+<li>Print only the second column from the file.</li>
 <li>Copy the content of the third column to a new file named
 annotations.txt.</li>
 <li>Search the occurrence of a specific pattern “putative” at the
 file.</li>
-<li>Replace the word “Putative” with “Unknown” throughout the file.</li>
+<li>Replace the word “Putative” with “Unknown” throughout the file and
+print the first 5 lines only.</li>
 <li>Merge the content of both files, table.tsv and annotations.txt, into
 a new file named merged.tsv.</li>
 </ol></div>
@@ -666,7 +668,7 @@ any links that you are not going to use.
   "url": "https://carpentries.github.io/workbench-template-md/instructor/practice-1.html",
   "identifier": "https://carpentries.github.io/workbench-template-md/instructor/practice-1.html",
   "dateCreated": "2026-01-16",
-  "dateModified": "2026-01-14",
+  "dateModified": "2026-01-16",
   "datePublished": "2026-01-16"
 }
 

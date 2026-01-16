@@ -344,14 +344,18 @@ repetitive tasks. This can save time and reduce the risk of errors.
 Mastering loops is an essential skill for anyone looking to become
 proficient in BASH scripting. Also, experienced users often combine
 scripts with assigned variables to make their code more dynamic and
-adaptable to different situations. Loops are no different than in other
-programming languades, and are used to repeat a specific block of code a
-certain number of times or until a particular condition is met. They are
-particularly useful when you need to perform the same operation on
-multiple files or datasets. There are two main types of loops in BASH:
-<code>for</code> loops and <code>while</code> loops. We’ve set two
-examples below to illustrate how each loop works. Open the terminal from
-the Google Colab plarform first to try them out.</p>
+adaptable to different situations. Loops in BASH are no different than
+in other programming languages, and are used to repeat a specific block
+of code a certain number of times or until a particular condition is
+met. They are particularly useful when you need to perform the same
+operation on multiple files or datasets. There are two main types of
+loops in BASH: <code>for</code> loops and <code>while</code> loops.
+Also, conditionals are often used by advaced users to control the flow
+of their scripts based on certain conditions. The most common
+conditional statements in BASH are <code>if</code>, <code>elif</code>,
+and <code>else</code>. We’ve set a few examples below to illustrate how
+loops and conditionals work. Open the terminal from the Google Colab
+plarform first to try them out.</p>
 <div class="section level3">
 <h3 id="for-loops">For Loops<a class="anchor" aria-label="anchor" href="#for-loops"></a></h3>
 <p>A <code>for</code> loop iterates over a list of items, executing a
@@ -389,6 +393,24 @@ to keep checking for the appearance of this file. Once the file is found
 <span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a>    <span class="fu">sleep</span> 5</span>
 <span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a><span class="cf">done</span></span>
 <span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"New file detected!"</span></span></code></pre>
+</div>
+</div>
+<div class="section level3">
+<h3 id="if-conditionals">If Conditionals<a class="anchor" aria-label="anchor" href="#if-conditionals"></a></h3>
+<p>An <code>if</code> statement allows you to execute a block of code
+only if a specified condition is true. Here’s an example that checks if
+a file named <code>data.csv</code> exists in the current directory. If
+the file exists, it prints a message indicating that the file was found;
+otherwise, it prints a message indicating that the file was not
+found.</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="cf">if</span> <span class="bu">[</span> <span class="ot">-f</span> data.csv <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">"File data.csv found."</span></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="cf">else</span></span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">"File data.csv not found."</span></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="cf">fi</span></span></code></pre>
 </div>
 </div>
 </section><section><h2 class="section-heading" id="bash-advanced-practice">Bash Advanced Practice<a class="anchor" aria-label="anchor" href="#bash-advanced-practice"></a></h2>
@@ -432,27 +454,26 @@ the number of lines processed <code>;)</code>
   Output
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb3">
+<div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">$</span> for file in <span class="pp">*</span>.csv<span class="kw">;</span> <span class="cf">do</span> <span class="fu">head</span> <span class="at">-n</span> 10 <span class="st">"</span><span class="va">$file</span><span class="st">"</span> <span class="op">&gt;</span> <span class="st">"</span><span class="va">${file</span><span class="op">%</span>.csv<span class="va">}</span><span class="st">_top10.csv"</span><span class="kw">;</span> <span class="cf">done</span></span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="co"># Our solution is a simple `for` loop that iterates over each CSV file in the current directory, using the `head` command to get the first 10 lines, and writing them to a new file with `_top10.csv` appended to the original filename.</span></span>
-<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="ex">$</span> sum=0<span class="kw">;</span> <span class="va">lines</span><span class="op">=</span>0<span class="kw">;</span></span>
-<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="cf">while</span> <span class="va">IFS</span><span class="op">=</span>, <span class="bu">read</span> <span class="at">-r</span> <span class="at">-a</span> <span class="va">nums</span><span class="kw">;</span> <span class="cf">do</span></span>
-<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a>  <span class="kw">((</span><span class="va">lines</span><span class="op">++</span><span class="kw">));</span></span>
-<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a>  <span class="cf">for</span> n <span class="kw">in</span> <span class="st">"</span><span class="va">${nums</span><span class="op">[@]</span><span class="va">}</span><span class="st">"</span><span class="kw">;</span> <span class="cf">do</span></span>
-<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a>    <span class="kw">((</span><span class="va">sum</span><span class="op">+=</span><span class="va">n</span><span class="kw">));</span></span>
-<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">((</span><span class="va">sum</span><span class="op">&gt;=</span><span class="dv">100000</span><span class="kw">));</span> <span class="cf">then</span></span>
-<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a>      <span class="bu">echo</span> <span class="st">"Reached sum </span><span class="va">$sum</span><span class="st"> after </span><span class="va">$lines</span><span class="st"> lines"</span><span class="kw">;</span></span>
-<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a>      <span class="cf">break</span> <span class="ex">2</span><span class="kw">;</span></span>
-<span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a>    <span class="cf">fi</span><span class="kw">;</span></span>
-<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a>  <span class="cf">done</span><span class="kw">;</span></span>
-<span id="cb3-14"><a href="#cb3-14" tabindex="-1"></a><span class="cf">done</span> <span class="op">&lt;</span> mnist_test.csv</span>
-<span id="cb3-15"><a href="#cb3-15" tabindex="-1"></a><span class="co"># Our suggested approach makes use of a `for` loop inside a `while` loop (nested loop), and also a `if` conditional statement. The `while` loop reads each line of the mnist_test.csv file, and the `for` loop iterates over each number in the line, adding it to the sum until the condition `if` (which checks when the sum reaches 100000) is met. All the above after setting two variables at the begining: `sum` to keep track of the total sum, and `lines` to count the number of lines processed.</span></span>
-<span id="cb3-16"><a href="#cb3-16" tabindex="-1"></a><span class="co"># </span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="ex">$</span> for file in <span class="pp">*</span>.csv<span class="kw">;</span> <span class="cf">do</span> <span class="fu">head</span> <span class="at">-n</span> 10 <span class="st">"</span><span class="va">$file</span><span class="st">"</span> <span class="op">&gt;</span> <span class="st">"</span><span class="va">${file</span><span class="op">%</span>.csv<span class="va">}</span><span class="st">_top10.csv"</span><span class="kw">;</span> <span class="cf">done</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="co"># Our solution is a simple `for` loop that iterates over each CSV file in the current directory, using the `head` command to get the first 10 lines, and writing them to a new file with `_top10.csv` appended to the original filename.</span></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a><span class="ex">$</span> sum=0<span class="kw">;</span> <span class="va">lines</span><span class="op">=</span>0<span class="kw">;</span></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a><span class="cf">while</span> <span class="va">IFS</span><span class="op">=</span>, <span class="bu">read</span> <span class="at">-r</span> <span class="at">-a</span> <span class="va">nums</span><span class="kw">;</span> <span class="cf">do</span></span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a>  <span class="kw">((</span><span class="va">lines</span><span class="op">++</span><span class="kw">));</span></span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a>  <span class="cf">for</span> n <span class="kw">in</span> <span class="st">"</span><span class="va">${nums</span><span class="op">[@]</span><span class="va">}</span><span class="st">"</span><span class="kw">;</span> <span class="cf">do</span></span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a>    <span class="kw">((</span><span class="va">sum</span><span class="op">+=</span><span class="va">n</span><span class="kw">));</span></span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">((</span><span class="va">sum</span><span class="op">&gt;=</span><span class="dv">100000</span><span class="kw">));</span> <span class="cf">then</span></span>
+<span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a>      <span class="bu">echo</span> <span class="st">"Reached sum </span><span class="va">$sum</span><span class="st"> after </span><span class="va">$lines</span><span class="st"> lines"</span><span class="kw">;</span></span>
+<span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a>      <span class="cf">break</span> <span class="ex">2</span><span class="kw">;</span></span>
+<span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a>    <span class="cf">fi</span><span class="kw">;</span></span>
+<span id="cb4-13"><a href="#cb4-13" tabindex="-1"></a>  <span class="cf">done</span><span class="kw">;</span></span>
+<span id="cb4-14"><a href="#cb4-14" tabindex="-1"></a><span class="cf">done</span> <span class="op">&lt;</span> mnist_test.csv</span>
+<span id="cb4-15"><a href="#cb4-15" tabindex="-1"></a><span class="co"># Our suggested approach makes use of a `for` loop inside a `while` loop (nested loop), and also a `if` conditional statement. The `while` loop reads each line of the mnist_test.csv file, and the `for` loop iterates over each number in the line, adding it to the sum until the condition `if` (which checks when the sum reaches 100000) is met. Observe that we break out of both loops using `break 2` when the condition is satisfied, and 'fi` to close the `if` statement. All the above after setting two variables at the begining: `sum` to keep track of the total sum, and `lines` to count the number of lines processed.</span></span></code></pre>
 </div>
 </div>
 </div>

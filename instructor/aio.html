@@ -498,7 +498,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-practice-1"><p>Content from <a href="practice-1.html">Hands-on Practice with BASH</a></p>
 <hr>
-<p>Last updated on 2026-01-14 |
+<p>Last updated on 2026-01-16 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/practice-1.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -731,18 +731,18 @@ data below (don’t forget the header) and past the content at the
 terminal, press <code>ESC</code>, then <code>:</code>, then
 <code>wq</code> and <code>ENTER</code> to save and exit vim editor.</p>
 <pre class="plaintext"><code>GeneID	Expression	Annotation
-Gene001	23.5	Putative kinase
-Gene002	45.2	Putative phosphatase
-Gene003	12.8	Transcription factor
-Gene004	67.1	Membrane protein
-Gene005	34.6	Putative transporter
-Gene006	78.9	Structural protein
+Gene001	23.5	Putative Kinase Gene
+Gene002	45.2	Putative Phosphatase Gene
+Gene003	12.8	Transcription Factor
+Gene004	67.1	Membrane Protein
+Gene005	34.6	Putative Transporter Gene
+Gene006	78.9	Structural Protein
 Gene007	56.3	Enzyme
-Gene008	89.0	Signal transducer
+Gene008	89.0	Signal Transducer
 Gene009	15.4	Receptor
-Gene010	42.7	Putative regulator
+Gene010	42.7	Putative Regulator Gene
 Gene011	29.3	Chaperone
-Gene012	53.8	Metabolic enzyme</code></pre>
+Gene012	53.8	Metabolic Enzyme</code></pre>
 <p>And here are the commands to practice with this new file. Remember to
 write down the output of each command as we will check it at the end of
 this exercise.</p>
@@ -753,10 +753,10 @@ this exercise.</p>
 <span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="ex">$</span> head table.tsv</span>
 <span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="ex">$</span> tail table.tsv</span>
 <span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="ex">$</span> more table.tsv</span>
-<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="ex">$</span> sort table.tsv</span>
-<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a><span class="ex">$</span> cut <span class="at">-f</span> 2 table.tsv <span class="kw">|</span> <span class="fu">sort</span> <span class="at">-n</span></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="ex">$</span> sort <span class="at">-k3</span> table.tsv</span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a><span class="ex">$</span> cut <span class="at">-f</span> 2 table.tsv</span>
 <span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a><span class="ex">$</span> cut <span class="at">-f</span> 3 table.tsv <span class="op">&gt;</span> annotations.txt</span>
-<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a><span class="ex">$</span> grep <span class="st">'Putative'</span> lipids.txt</span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a><span class="ex">$</span> grep <span class="st">'Putative'</span> lipids.txt <span class="kw">|</span> <span class="fu">head</span> <span class="at">-n</span> 5</span>
 <span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a><span class="ex">$</span> sed <span class="st">'s/Putative/Unknown/g'</span> table.tsv</span>
 <span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a><span class="ex">$</span> paste table.tsv annotations.txt <span class="op">&gt;</span> merged.tsv</span></code></pre>
 </div>
@@ -770,7 +770,7 @@ this exercise.</p>
 the commands above</h3>
 <div class="callout-content">
 <ul>
-<li>Print only the second column from the file in a numeric order.</li>
+<li>Print only the second column from the file.</li>
 <li>Print the last 10 lines.</li>
 <li>Print the first 10 lines.</li>
 <li>Copy the content of the third column to a new file named
@@ -780,12 +780,13 @@ annotations.txt.</li>
 file.</li>
 <li>Merge the content of both files, table.tsv and annotations.txt, into
 a new file named merged.tsv.</li>
-<li>Replace the word “Putative” with “Unknown” throughout the file.</li>
+<li>Replace the word “Putative” with “Unknown” throughout the file and
+print the first 5 lines only.</li>
 <li>Show the content of the whole file progressively; <code>cat</code>
-can also be used to show the content of a file but it does not allow
+may also be used to show the content of a file but it does not allow
 progressive visualization.</li>
 <li>Print the file in an alfabetically ordered fashion by the element at
-the first column on each line</li>
+the third column on each line</li>
 </ul>
 </div>
 </div>
@@ -804,14 +805,15 @@ the first column on each line</li>
 <li>Print the first 10 lines.</li>
 <li>Print the last 10 lines.</li>
 <li>Show the content of the whole file progressively.</li>
-<li>Print the file in an ordered fashion by element at the first column
-on each line</li>
-<li>Print only the second column from the file in a numeric order.</li>
+<li>Print the file in an alfabetically ordered fashion by the element at
+the third column on each line</li>
+<li>Print only the second column from the file.</li>
 <li>Copy the content of the third column to a new file named
 annotations.txt.</li>
 <li>Search the occurrence of a specific pattern “putative” at the
 file.</li>
-<li>Replace the word “Putative” with “Unknown” throughout the file.</li>
+<li>Replace the word “Putative” with “Unknown” throughout the file and
+print the first 5 lines only.</li>
 <li>Merge the content of both files, table.tsv and annotations.txt, into
 a new file named merged.tsv.</li>
 </ol>
@@ -826,7 +828,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-practice-2"><p>Content from <a href="practice-2.html">More hands-on practice with BASH</a></p>
 <hr>
-<p>Last updated on 2026-01-13 |
+<p>Last updated on 2026-01-16 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/practice-2.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -908,6 +910,12 @@ reverse order.</li>
 columns 3, 2 and 1 in this order and as a tab separated value.</li>
 <li>Print the first 3 lines of the file <code>table.tsv</code> starting
 from line 7 (i.e., lines 7, 8 and 9) usind <code>sed</code>.</li>
+<li>Sort the file <code>table.tsv</code> based on the values in the
+second column in descending order and print the first 5 lines of the
+sorted output.</li>
+<li>Replace only the first occurrences of the word “gene” with “GENE” in
+the file <code>table.tsv</code> and display the modified content whilst
+changing the original file.</li>
 </ul>
 </div>
 </div>
@@ -929,7 +937,9 @@ from line 7 (i.e., lines 7, 8 and 9) usind <code>sed</code>.</li>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="ex">$</span> grep <span class="at">-v</span> <span class="st">"Putative"</span> table.tsv <span class="kw">|</span> <span class="fu">cut</span> <span class="at">-f</span> 3 <span class="op">&gt;&gt;</span> annotations.txt</span>
 <span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="ex">$</span> head <span class="at">-n</span> 5 table.tsv <span class="kw">|</span> <span class="fu">tac</span></span>
 <span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="ex">$</span> awk <span class="at">-v</span> OFS=<span class="st">'\t'</span> <span class="st">'{print $3, $2, $1}'</span> table.tsv</span>
-<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="ex">$</span> sed <span class="at">-n</span> <span class="st">'7,9p'</span> table.tsv</span></code></pre>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="ex">$</span> sed <span class="at">-n</span> <span class="st">'7,9p'</span> table.tsv</span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a><span class="ex">$</span> sort <span class="at">-k2</span> <span class="at">-nr</span> table.tsv <span class="kw">|</span> <span class="fu">head</span> <span class="at">-5</span></span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a><span class="ex">$</span> sed <span class="at">-i</span> <span class="st">'s/Gene/GENE/1'</span> table.tsv <span class="kw">&amp;&amp;</span> <span class="fu">cat</span> table.tsv</span></code></pre>
 </div>
 </div>
 </div>
@@ -997,14 +1007,18 @@ repetitive tasks. This can save time and reduce the risk of errors.
 Mastering loops is an essential skill for anyone looking to become
 proficient in BASH scripting. Also, experienced users often combine
 scripts with assigned variables to make their code more dynamic and
-adaptable to different situations. Loops are no different than in other
-programming languades, and are used to repeat a specific block of code a
-certain number of times or until a particular condition is met. They are
-particularly useful when you need to perform the same operation on
-multiple files or datasets. There are two main types of loops in BASH:
-<code>for</code> loops and <code>while</code> loops. We’ve set two
-examples below to illustrate how each loop works. Open the terminal from
-the Google Colab plarform first to try them out.</p>
+adaptable to different situations. Loops in BASH are no different than
+in other programming languages, and are used to repeat a specific block
+of code a certain number of times or until a particular condition is
+met. They are particularly useful when you need to perform the same
+operation on multiple files or datasets. There are two main types of
+loops in BASH: <code>for</code> loops and <code>while</code> loops.
+Also, conditionals are often used by advaced users to control the flow
+of their scripts based on certain conditions. The most common
+conditional statements in BASH are <code>if</code>, <code>elif</code>,
+and <code>else</code>. We’ve set a few examples below to illustrate how
+loops and conditionals work. Open the terminal from the Google Colab
+plarform first to try them out.</p>
 <div class="section level3">
 <h3 id="for-loops">For Loops<a class="anchor" aria-label="anchor" href="#for-loops"></a>
 </h3>
@@ -1044,6 +1058,25 @@ to keep checking for the appearance of this file. Once the file is found
 <span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a>    <span class="fu">sleep</span> 5</span>
 <span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a><span class="cf">done</span></span>
 <span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"New file detected!"</span></span></code></pre>
+</div>
+</div>
+<div class="section level3">
+<h3 id="if-conditionals">If Conditionals<a class="anchor" aria-label="anchor" href="#if-conditionals"></a>
+</h3>
+<p>An <code>if</code> statement allows you to execute a block of code
+only if a specified condition is true. Here’s an example that checks if
+a file named <code>data.csv</code> exists in the current directory. If
+the file exists, it prints a message indicating that the file was found;
+otherwise, it prints a message indicating that the file was not
+found.</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="cf">if</span> <span class="bu">[</span> <span class="ot">-f</span> data.csv <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">"File data.csv found."</span></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="cf">else</span></span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">"File data.csv not found."</span></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="cf">fi</span></span></code></pre>
 </div>
 </div>
 </section><section><h2 class="section-heading" id="bash-advanced-practice">Bash Advanced Practice<a class="anchor" aria-label="anchor" href="#bash-advanced-practice"></a>
@@ -1093,27 +1126,26 @@ the number of lines processed <code>;)</code>
   Output
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb3">
+<div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">$</span> for file in <span class="pp">*</span>.csv<span class="kw">;</span> <span class="cf">do</span> <span class="fu">head</span> <span class="at">-n</span> 10 <span class="st">"</span><span class="va">$file</span><span class="st">"</span> <span class="op">&gt;</span> <span class="st">"</span><span class="va">${file</span><span class="op">%</span>.csv<span class="va">}</span><span class="st">_top10.csv"</span><span class="kw">;</span> <span class="cf">done</span></span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="co"># Our solution is a simple `for` loop that iterates over each CSV file in the current directory, using the `head` command to get the first 10 lines, and writing them to a new file with `_top10.csv` appended to the original filename.</span></span>
-<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="ex">$</span> sum=0<span class="kw">;</span> <span class="va">lines</span><span class="op">=</span>0<span class="kw">;</span></span>
-<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="cf">while</span> <span class="va">IFS</span><span class="op">=</span>, <span class="bu">read</span> <span class="at">-r</span> <span class="at">-a</span> <span class="va">nums</span><span class="kw">;</span> <span class="cf">do</span></span>
-<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a>  <span class="kw">((</span><span class="va">lines</span><span class="op">++</span><span class="kw">));</span></span>
-<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a>  <span class="cf">for</span> n <span class="kw">in</span> <span class="st">"</span><span class="va">${nums</span><span class="op">[@]</span><span class="va">}</span><span class="st">"</span><span class="kw">;</span> <span class="cf">do</span></span>
-<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a>    <span class="kw">((</span><span class="va">sum</span><span class="op">+=</span><span class="va">n</span><span class="kw">));</span></span>
-<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">((</span><span class="va">sum</span><span class="op">&gt;=</span><span class="dv">100000</span><span class="kw">));</span> <span class="cf">then</span></span>
-<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a>      <span class="bu">echo</span> <span class="st">"Reached sum </span><span class="va">$sum</span><span class="st"> after </span><span class="va">$lines</span><span class="st"> lines"</span><span class="kw">;</span></span>
-<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a>      <span class="cf">break</span> <span class="ex">2</span><span class="kw">;</span></span>
-<span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a>    <span class="cf">fi</span><span class="kw">;</span></span>
-<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a>  <span class="cf">done</span><span class="kw">;</span></span>
-<span id="cb3-14"><a href="#cb3-14" tabindex="-1"></a><span class="cf">done</span> <span class="op">&lt;</span> mnist_test.csv</span>
-<span id="cb3-15"><a href="#cb3-15" tabindex="-1"></a><span class="co"># Our suggested approach makes use of a `for` loop inside a `while` loop (nested loop), and also a `if` conditional statement. The `while` loop reads each line of the mnist_test.csv file, and the `for` loop iterates over each number in the line, adding it to the sum until the condition `if` (which checks when the sum reaches 100000) is met. All the above after setting two variables at the begining: `sum` to keep track of the total sum, and `lines` to count the number of lines processed.</span></span>
-<span id="cb3-16"><a href="#cb3-16" tabindex="-1"></a><span class="co"># </span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="ex">$</span> for file in <span class="pp">*</span>.csv<span class="kw">;</span> <span class="cf">do</span> <span class="fu">head</span> <span class="at">-n</span> 10 <span class="st">"</span><span class="va">$file</span><span class="st">"</span> <span class="op">&gt;</span> <span class="st">"</span><span class="va">${file</span><span class="op">%</span>.csv<span class="va">}</span><span class="st">_top10.csv"</span><span class="kw">;</span> <span class="cf">done</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="co"># Our solution is a simple `for` loop that iterates over each CSV file in the current directory, using the `head` command to get the first 10 lines, and writing them to a new file with `_top10.csv` appended to the original filename.</span></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a><span class="ex">$</span> sum=0<span class="kw">;</span> <span class="va">lines</span><span class="op">=</span>0<span class="kw">;</span></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a><span class="cf">while</span> <span class="va">IFS</span><span class="op">=</span>, <span class="bu">read</span> <span class="at">-r</span> <span class="at">-a</span> <span class="va">nums</span><span class="kw">;</span> <span class="cf">do</span></span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a>  <span class="kw">((</span><span class="va">lines</span><span class="op">++</span><span class="kw">));</span></span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a>  <span class="cf">for</span> n <span class="kw">in</span> <span class="st">"</span><span class="va">${nums</span><span class="op">[@]</span><span class="va">}</span><span class="st">"</span><span class="kw">;</span> <span class="cf">do</span></span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a>    <span class="kw">((</span><span class="va">sum</span><span class="op">+=</span><span class="va">n</span><span class="kw">));</span></span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">((</span><span class="va">sum</span><span class="op">&gt;=</span><span class="dv">100000</span><span class="kw">));</span> <span class="cf">then</span></span>
+<span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a>      <span class="bu">echo</span> <span class="st">"Reached sum </span><span class="va">$sum</span><span class="st"> after </span><span class="va">$lines</span><span class="st"> lines"</span><span class="kw">;</span></span>
+<span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a>      <span class="cf">break</span> <span class="ex">2</span><span class="kw">;</span></span>
+<span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a>    <span class="cf">fi</span><span class="kw">;</span></span>
+<span id="cb4-13"><a href="#cb4-13" tabindex="-1"></a>  <span class="cf">done</span><span class="kw">;</span></span>
+<span id="cb4-14"><a href="#cb4-14" tabindex="-1"></a><span class="cf">done</span> <span class="op">&lt;</span> mnist_test.csv</span>
+<span id="cb4-15"><a href="#cb4-15" tabindex="-1"></a><span class="co"># Our suggested approach makes use of a `for` loop inside a `while` loop (nested loop), and also a `if` conditional statement. The `while` loop reads each line of the mnist_test.csv file, and the `for` loop iterates over each number in the line, adding it to the sum until the condition `if` (which checks when the sum reaches 100000) is met. Observe that we break out of both loops using `break 2` when the condition is satisfied, and 'fi` to close the `if` statement. All the above after setting two variables at the begining: `sum` to keep track of the total sum, and `lines` to count the number of lines processed.</span></span></code></pre>
 </div>
 </div>
 </div>
