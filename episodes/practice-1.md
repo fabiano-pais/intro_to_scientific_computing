@@ -56,8 +56,8 @@ Learn the commands below as they're the most used ones in BASH:
 
 ::::::::::::::::::::::::::::::::::::: callout
 
+- Also consider accessing (https://linuxcommand.org/lc3_man_page_index.php) for more information about BASH commands.
 - Use up/down arrows on your keyboard to check previously executed commands.
-- Type “history” to see (at the standout) the commands you’ve entered previously.
 - When typing long commands, use the tab key to autocomplete program names and file/folder names.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -118,6 +118,7 @@ $ rm -r folder/
 
 - You can combine commands using the pipe operator (|) to create more complex workflows.
 - You can redirect the standard output from one command to new files using the greater-than symbol (>). Example: `head -n 5 table.tsv > top5.tsv` will create a new file named top5.tsv containing the first 5 lines of table.tsv.
+- Type “history” to see (at the standout) the commands you’ve entered previously.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
