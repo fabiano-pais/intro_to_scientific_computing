@@ -23,7 +23,7 @@ Based on your previous exercises, use the same terminal from the Google Colab pl
 But first, you'll need the same table.tsv generated in the previous exercises to complete these challenges. If you don't have it anymore, you can recreate it by following the steps in the previous episode.
 
 ## Exercises 3
-Write a command line to execute what's asked in each challenge below. Right down your answer before opening the output cell to check which of your command were correct. Please remember that you can use `name-of-program --help` to obtain more information about each command and their optional flags. Also, keep in mind that multiple commands can be combined using the pipe `|` symbol. One last thing to know is that is not unusual to use different commands to get same the desired output. So don't worry if your answer is different from the solution provided. Getting the correct output is what matters the most.
+Write a command line to execute what's asked in each challenge below. Right down your answer before opening the output cell to check which of your command were correct. Please remember that you can use `name-of-program --help` or access (https://linuxcommand.org/lc3_man_page_index.php) to obtain more information about each command and their optional flags. Also, keep in mind that multiple commands can be combined using the pipe `|` symbol. One last thing to know is that is not unusual to use different commands to get same the desired output. So don't worry if your answer is different from the solution provided. Getting the correct output is what matters the most.
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
