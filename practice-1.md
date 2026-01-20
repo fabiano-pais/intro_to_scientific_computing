@@ -65,7 +65,8 @@ Learn the commands below as they're the most used ones in BASH:
 ## Exercises
 
 ### Exercise 1
-Open your terminal and execute the commands below to practice BASH commands. Write down the output of each coommand as we will check it at the end of this exercise.
+Open your terminal and execute the commands below to practice BASH commands. Write down the output of each coommand as we will check it at the end of this exercise. Before and ffter executing each command, type `ls` and press `ENTER` to see the content of your current folder (and how the content changes after each command).
+Please, note that the `$` symbol represents the terminal prompt and should not be typed.
 ```bash
 $ mkdir course_folder
 $ cd course_folder
@@ -126,7 +127,7 @@ $ rm -r folder/
 
 In order to run the next exercise, make sure you're in the `sample_data` folder where you started before. If not, type `cd ~/sample_data` to get back to it.
 Create a new file named table.tsv and paste the content below into it.
-In order to create and edit the file, you can use `vim table.tsv` command. Copy the data below (don't forget the header) and past the content at the terminal, press `ESC`, then `:`, then `wq` and `ENTER` to save and exit vim editor.
+In order to create and edit the file, you can use `vim table.tsv` command. Copy the data below (don't forget the header) and past the content at the terminal, press `ESC`, then `:`, then `wq` and press `ENTER` to save and exit vim editor.
 
 ```plaintext
 GeneID	Expression	Annotation
