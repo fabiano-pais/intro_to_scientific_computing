@@ -153,7 +153,7 @@ $ more table.tsv
 $ sort -k3 table.tsv
 $ cut -f 2 table.tsv
 $ cut -f 3 table.tsv > annotations.txt
-$ grep 'Putative' lipids.txt | head -n 5
+$ grep 'Putative' table.tsv | head -n 5
 $ sed 's/Putative/Unknown/g' table.tsv
 $ paste table.tsv annotations.txt > merged.tsv
 ````
