@@ -29,7 +29,7 @@ Write a command line to execute what's asked in each challenge below. Right down
 
 ## Challenge 3:
 
-- Print only the 7th, 8th and 9th columns of the file `table.tsv`.
+- Print only the 7th, 8th and 9th lines of the file `table.tsv`.
 - Print only the number of lines of the file `table.tsv`.
 - Select only lines which do not show Putative in the annotation column of the file `table.tsv`, collect the third column and append the output to the previously created `annotations.txt` file.
 - Print the first 5 lines of the file `table.tsv` in reverse order.
