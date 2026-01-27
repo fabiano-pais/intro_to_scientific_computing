@@ -338,7 +338,7 @@
         
 <section id="aio-introduction"><p>Content from <a href="introduction.html">Everything you need to know before getting started</a></p>
 <hr>
-<p>Last updated on 2026-01-14 |
+<p>Last updated on 2026-01-27 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -379,9 +379,9 @@ The complexity of the problem might require proficiency in one or more
 programing languages. You may need to be able to write Python or R
 scripts at some point, but you’ll definetly need to know BASH for a
 start. BASH is a very simple programming language, or a shell actually,
-and one that can connect you to a high performance computer (HPC). In
-order to learn BASH, you’ll need to work with a command-line
-application, such as a terminal, to get the most from BASH.</p>
+and one that can connect you to a remote high performance computer
+(HPC). In order to learn BASH, you’ll need to work with a command-line
+application, such as a terminal.</p>
 <p>Here, you’ll learn the most important commands in BASH so you can
 carry on your jobs. This will be achieved by working through a series of
 exercises using a terminal within Google Colab as the main interface.
@@ -453,7 +453,7 @@ its native Operating System?</h3>
   Output
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>ZSH is the main MacOS shell; BASH is the main one for Linux;
 PowerShell is the Windows main shell.</p>
@@ -498,7 +498,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-practice-1"><p>Content from <a href="practice-1.html">Hands-on Practice with BASH</a></p>
 <hr>
-<p>Last updated on 2026-01-21 |
+<p>Last updated on 2026-01-27 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/practice-1.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -541,21 +541,18 @@ click at the “Terminal” icon at the lower left sidebar to open a
 terminal window within Colab. This terminal will act as your BASH
 environment where you’ll be able to practice the commands you’ll learn
 here.</p>
-<p>Start by typing <code>cd sample_data</code> to access a folder that
-already contains some files you’ll be using during our training. Then,
-scroll down here to find a series of exercises that will help you
-practice the most important BASH commands. Observe the commands you’ll
-be using, along with its syntax at each example.</p>
-<p>The first thing you must know is that, in general, there are two key
-elements required to execute a BASH command:</p>
+<p>Scroll down to find a series of exercises that will help you practice
+the most important BASH commands. Check the “Commands” section below to
+see a brief description of the commands you’ll be using.</p>
+<p>The first thing you must know is that, the basic syntax for executing
+a command requires at least two elements:</p>
 <ol style="list-style-type: decimal">
 <li>The program, which will execute an specific task;</li>
 <li>The file or input data the program will work on;</li>
 </ol>
-<p>Optional flags that modify the behavior of the program. The available
-flags for each program can be accessed by typing
-<code>name-of-program --help</code>. Try it with the commands you’ll
-learn below.</p>
+<p>Optional flags, that modify the behavior of the program, can also be
+used. The available flags for each program can be accessed by typing
+<code>PROGRAM --help</code> (for examples: <code>ls --help</code>).</p>
 </section><section><h2 class="section-heading" id="commands">Commands<a class="anchor" aria-label="anchor" href="#commands"></a>
 </h2>
 <hr class="half-width">
@@ -564,13 +561,14 @@ learn below.</p>
 <li>
 <code>ls</code> – listing the content of a folder</li>
 <li>
-<code>cd</code> – to access different folders</li>
+<code>cd</code> – used to access different folders</li>
 <li>
-<code>pwd</code> – shows your current folder</li>
+<code>pwd</code> – shows your current folder (or PATH) in the file
+system</li>
 <li>
-<code>cp</code> – copy file(s) or folder(s)</li>
+<code>cp</code> – copy file(s) or folder(s) to a new location</li>
 <li>
-<code>mv</code> – move file(s) or folder(s)</li>
+<code>mv</code> – move file(s) or folder(s) to a new location</li>
 <li>
 <code>rm</code> – remove/erase file(s) or folder(s)</li>
 <li>
@@ -578,24 +576,26 @@ learn below.</p>
 <li>
 <code>touch</code> – create new file</li>
 <li>
-<code>wc</code> – word count will give total characters, words and
-lines</li>
+<code>wc</code> – shows the total number of characters, words and
+lines of a file</li>
 <li>
-<code>head</code> – print the first 10 lines of a file</li>
+<code>head</code> – print the first 10 (default) lines of a
+file</li>
 <li>
-<code>tail</code> – print the last 10 lines of a file</li>
+<code>tail</code> – print the last 10 (default) lines of a file</li>
 <li>
 <code>more</code> – show the content of a file progressively (good
 for big files)</li>
 <li>
-<code>sort</code> – organize your data by specific order</li>
+<code>sort</code> – organize your data by specific order of a given
+column</li>
 <li>
 <code>cut</code> – print selected columns from a file</li>
 <li>
 <code>grep</code> – used to search for patterns in a file</li>
 <li>
 <code>paste</code> – merges the content of one file with a second
-file side-by-sing horizontally</li>
+file side-by-sing (horizontally)</li>
 <li>
 <code>cat</code> – show the content of a file</li>
 <li>
@@ -629,27 +629,26 @@ names and file/folder names.</li>
 <div class="section level3">
 <h3 id="exercise-1">Exercise 1<a class="anchor" aria-label="anchor" href="#exercise-1"></a>
 </h3>
-<p>Open your terminal and execute the commands below to practice BASH
-commands. Write down the output of each coommand as we will check it at
-the end of this exercise. Before and ffter executing each command, type
-<code>ls</code> and press <code>ENTER</code> to see the content of your
-current folder (and how the content changes after each command). Please,
-note that the <code>$</code> symbol represents the terminal prompt and
-should not be typed.</p>
+<p>Use your terminal to run the commands below to practice BASH. Write
+down the output of each coommand as we will check it at the end of this
+exercise. Before and after executing each command, type <code>ls</code>
+and press <code>ENTER</code> to see the content of your current folder
+(and how this content changes after each command).</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">$</span> mkdir course_folder</span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="ex">$</span> cd course_folder</span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="ex">$</span> pwd</span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="ex">$</span> touch course_file.txt</span>
-<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="ex">$</span> mkdir folder</span>
-<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="ex">$</span> mv course_file.txt folder/</span>
-<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a><span class="ex">$</span> cd folder/</span>
-<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a><span class="ex">$</span> cp course_file.txt ../</span>
-<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a><span class="ex">$</span> cd ..</span>
-<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a><span class="ex">$</span> rm course_file.txt</span>
-<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a><span class="ex">$</span> rm <span class="at">-r</span> folder/</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="co"># Please, note that the `$` symbol represents the terminal prompt and should not be typed.</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="ex">$</span> mkdir course_folder</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="ex">$</span> cd course_folder</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="ex">$</span> pwd</span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="ex">$</span> touch course_file.txt</span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="ex">$</span> mkdir course_folder2</span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a><span class="ex">$</span> mv course_file.txt course_folder2/</span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a><span class="ex">$</span> cd course_folder2/</span>
+<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a><span class="ex">$</span> cp course_file.txt ../</span>
+<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a><span class="ex">$</span> cd ..</span>
+<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a><span class="ex">$</span> rm course_file.txt</span>
+<span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a><span class="ex">$</span> rm <span class="at">-r</span> course_folder2/</span></code></pre>
 </div>
 <div id="challenge-1-order-the-sequence-of-events-from-the-commands-above" class="callout challenge">
 <div class="callout-square">
@@ -661,18 +660,8 @@ should not be typed.</p>
 the commands above</h3>
 <div class="callout-content">
 <ul>
-<li>Go to ther new folder.</li>
-<li>Enter a folder you’ve created.</li>
-<li>Create a new directory to work.</li>
-<li>Move your empty file to the folder you`ve just created.</li>
-<li>Show your current path.</li>
-<li>Erase the folder you’ve created</li>
-<li>Erase course_file.txt at your current folder.</li>
-<li>Create a new folder.</li>
-<li>Copy course_file.txt to the previous folder on your current
-path.</li>
-<li>Create a file.</li>
-<li>Go to the previous folder on your current path.</li>
+<li>Click the output box below to reveal the correct order of events
+from the commands above.</li>
 </ul>
 </div>
 </div>
@@ -684,21 +673,22 @@ path.</li>
   Output
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
-<li>Create a new directory to work.</li>
+<li>Create a new directory to work called
+<code>course_folder</code>.</li>
 <li>Enter a folder you’ve created.</li>
-<li>Show your current path.</li>
-<li>Create a file.</li>
-<li>Create a new folder.</li>
-<li>Move your empty file to the folder you`ve just created.</li>
+<li>Show your current directory (or path).</li>
+<li>Creates a file.</li>
+<li>Creates a new course_folder2.</li>
+<li>Move your empty file to the second folder you`ve created.</li>
 <li>Go to ther new folder.</li>
-<li>Copy course_file.txt to the previous folder on your current
-path.</li>
-<li>Go to the previous folder on your current path.</li>
+<li>Copy course_file.txt to the previous folder from your current
+directory (or path).</li>
+<li>Go to the previous folder from your current path.</li>
 <li>Erase course_file.txt at your current folder.</li>
-<li>Erase the folder you’ve created.</li>
+<li>Erase the second folder you’ve created.</li>
 </ol>
 </div>
 </div>
@@ -728,15 +718,9 @@ previously.</li>
 <div class="section level3">
 <h3 id="exercise-2">Exercise 2<a class="anchor" aria-label="anchor" href="#exercise-2"></a>
 </h3>
-<p>In order to run the next exercise, make sure you’re in the
-<code>sample_data</code> folder where you started before. If not, type
-<code>cd ~/sample_data</code> to get back to it. Create a new file named
-table.tsv and paste the content below into it. In order to create and
-edit the file, you can use <code>vim table.tsv</code> command. Copy the
-data below (don’t forget the header) and past the content at the
-terminal, press <code>ESC</code>, then <code>:</code>, then
-<code>wq</code> and press <code>ENTER</code> to save and exit vim
-editor.</p>
+<p>This exercise requires creating first a new file named table.tsv. The
+content of the file was placed below. Please select and copy all the
+content below (including the header) to create the file.</p>
 <pre class="plaintext"><code>GeneID	Expression	Annotation
 Gene001	23.5	Putative Kinase Gene
 Gene002	45.2	Putative Phosphatase Gene
@@ -750,22 +734,34 @@ Gene009	15.4	Receptor
 Gene010	42.7	Putative Regulator Gene
 Gene011	29.3	Chaperone
 Gene012	53.8	Metabolic Enzyme</code></pre>
-<p>And here are the commands to practice with this new file. Remember to
-write down the output of each command as we will check it at the end of
-this exercise.</p>
+<p>To create the file, run the next command to create it:</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">$</span> wc table.tsv</span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="ex">$</span> head table.tsv</span>
-<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="ex">$</span> tail table.tsv</span>
-<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="ex">$</span> more table.tsv</span>
-<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="ex">$</span> sort <span class="at">-k3</span> table.tsv</span>
-<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a><span class="ex">$</span> cut <span class="at">-f</span> 2 table.tsv</span>
-<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a><span class="ex">$</span> cut <span class="at">-f</span> 3 table.tsv <span class="op">&gt;</span> annotations.txt</span>
-<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a><span class="ex">$</span> grep <span class="st">'Putative'</span> table.tsv <span class="kw">|</span> <span class="fu">head</span> <span class="at">-n</span> 5</span>
-<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a><span class="ex">$</span> sed <span class="st">'s/Putative/Unknown/g'</span> table.tsv</span>
-<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a><span class="ex">$</span> paste table.tsv annotations.txt <span class="op">&gt;</span> merged.tsv</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">$</span> vim table.tsv</span></code></pre>
+</div>
+<p>As you can see, your terminal now looks different. <code>Vim</code>
+is a text editor, so please paste the content you’ve copied from above
+at your terminal. USE THE ARROWS IF YOU NEED TO MAKE ANY CORRECTION TO
+THE TEXT AT ANY GIVEN ROW (the mouse will not work). Then press
+<code>ESC</code>, then <code>:</code>, then <code>wq</code> and finally
+<code>ENTER</code> to save and exit vim editor. Once the above is
+complete, please run the commands below to practice with the new table.
+Remember to write down the output of each command as we will check it at
+the end of this exercise.</p>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="ex">$</span> wc table.tsv</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="ex">$</span> head table.tsv</span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="ex">$</span> tail table.tsv</span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a><span class="ex">$</span> more table.tsv</span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a><span class="ex">$</span> sort <span class="at">-k3</span> table.tsv</span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a><span class="ex">$</span> cut <span class="at">-f</span> 2 table.tsv</span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a><span class="ex">$</span> cut <span class="at">-f</span> 3 table.tsv <span class="op">&gt;</span> annotations.txt</span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a><span class="ex">$</span> grep <span class="st">'Putative'</span> table.tsv <span class="kw">|</span> <span class="fu">head</span> <span class="at">-n</span> 5</span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a><span class="ex">$</span> sed <span class="st">'s/Putative/Unknown/g'</span> table.tsv</span>
+<span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a><span class="ex">$</span> paste table.tsv annotations.txt <span class="op">&gt;</span> merged.tsv</span></code></pre>
 </div>
 <div id="challenge-2-order-the-sequence-of-events-from-the-commands-above" class="callout challenge">
 <div class="callout-square">
@@ -777,23 +773,8 @@ this exercise.</p>
 the commands above</h3>
 <div class="callout-content">
 <ul>
-<li>Print only the second column from the file.</li>
-<li>Print the last 10 lines.</li>
-<li>Print the first 10 lines.</li>
-<li>Copy the content of the third column to a new file named
-annotations.txt.</li>
-<li>Get the counts of characters, words and lines from your file.</li>
-<li>Search the occurrence of a specific pattern “putative” at the
-file.</li>
-<li>Merge the content of both files, table.tsv and annotations.txt, into
-a new file named merged.tsv.</li>
-<li>Replace the word “Putative” with “Unknown” throughout the file and
-print the first 5 lines only.</li>
-<li>Show the content of the whole file progressively; <code>cat</code>
-may also be used to show the content of a file but it does not allow
-progressive visualization.</li>
-<li>Print the file in an alfabetically ordered fashion by the element at
-the third column on each line</li>
+<li>Click the output box below to reveal the correct order of events
+from the commands above.</li>
 </ul>
 </div>
 </div>
@@ -805,7 +786,7 @@ the third column on each line</li>
   Output
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Get the counts of characters, words and lines from your file.</li>
@@ -835,7 +816,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-practice-2"><p>Content from <a href="practice-2.html">More hands-on practice with BASH</a></p>
 <hr>
-<p>Last updated on 2026-01-21 |
+<p>Last updated on 2026-01-27 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/practice-2.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -873,14 +854,12 @@ within Google Colab</li>
 </h2>
 <hr class="half-width">
 <p>Based on your previous exercises, use the same terminal from the
-Google Colab platform to test your knowledge on BASH commands. Start by
-typing <code>cd sample_data</code> to access the folder that contains
-the files you’ll be using during this training. Scroll down to find a
-series of exercises which will demand choosing for specific flags to
-generate the desired output. But first, you’ll need the same table.tsv
-generated in the previous exercises to complete these challenges. If you
-don’t have it anymore, you can recreate it by following the steps in the
-previous episode.</p>
+Google Colab platform to test your knowledge on BASH commands. Scroll
+down to find a series of exercises which will demand choosing for
+specific flags to generate the desired output. But first, you’ll need
+the same table.tsv generated in the previous exercises to complete these
+challenges. If you don’t have it anymore, you can recreate it by
+following the steps in the previous episode.</p>
 </section><section><h2 class="section-heading" id="exercises-3">Exercises 3<a class="anchor" aria-label="anchor" href="#exercises-3"></a>
 </h2>
 <hr class="half-width">
@@ -1133,7 +1112,7 @@ the number of lines processed <code>;)</code>
   Output
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1229,7 +1208,7 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://carpentries.github.io/workbench-template-md/instructor/aio.html",
   "identifier": "https://carpentries.github.io/workbench-template-md/instructor/aio.html",
-  "dateCreated": "2026-01-21",
+  "dateCreated": "2026-01-27",
   "dateModified": "2026-01-27",
   "datePublished": "2026-01-27"
 }
