@@ -25,10 +25,10 @@ Scroll down to find a series of exercises that will help you practice the most i
 
 The first thing you must know is that, the basic syntax for executing a command requires at least two elements:
 
- 1. The program, which will execute an specific task;
- 2. The file or input data the program will work on;
+ 1. The command, which will execute an specific task;
+ 2. The file or input data the command will work on.;
 
-Optional flags, that modify the behavior of the program, can also be used. The available flags for each program can be accessed by typing `PROGRAM --help` (for examples: `ls --help`).
+Optional flags, that modify the behavior of the command, can also be used. The available flags for each command can be accessed by typing `command --help` (for example: `ls --help`).
 
 ## Commands
 
