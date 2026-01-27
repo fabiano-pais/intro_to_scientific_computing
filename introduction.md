@@ -19,8 +19,8 @@ exercises: 2 # exercise time in minutes
 
 ## Setting the stage
 
-Scientific computing is all about solving problems using computers. The complexity of the problem might require proficiency in one or more programing languages. You may need to be able to write Python or R scripts at some point, but you'll definetly need to know BASH for a start. BASH is a very simple programming language, or a shell actually, and one that can connect you to a high performance computer (HPC).
-In order to learn BASH, you'll need to work with a command-line application, such as a terminal, to get the most from BASH.
+Scientific computing is all about solving problems using computers. The complexity of the problem might require proficiency in one or more programing languages. You may need to be able to write Python or R scripts at some point, but you'll definetly need to know BASH for a start. BASH is a very simple programming language, or a shell actually, and one that can connect you to a remote high performance computer (HPC).
+In order to learn BASH, you'll need to work with a command-line application, such as a terminal.
 
 Here, you'll learn the most important commands in BASH so you can carry on your jobs. This will be achieved by working through a series of exercises using a terminal within Google Colab as the main interface.  You'll be given instructions on how to open a terminal within Google Colab at the next episode. However, if you don't have a Google account yet, please create one before continuing.
 

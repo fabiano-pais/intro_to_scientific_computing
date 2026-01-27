@@ -21,35 +21,35 @@ exercises: 10 # exercise time in minutes
 
 Open your Colab account (https://colab.research.google.com). Colab is not a separate service, but rather a part of your Google account. Once opened, click at the "Terminal" icon at the lower left sidebar to open a terminal window within Colab. This terminal will act as your BASH environment where you'll be able to practice the commands you'll learn here.
 
-Start by typing `cd sample_data` to access a folder that already contains some files you'll be using during our training. Then, scroll down here to find a series of exercises that will help you practice the most important BASH commands. Observe the commands you'll be using, along with its syntax at each example.
+Scroll down to find a series of exercises that will help you practice the most important BASH commands. Check the "Commands" section below to see a brief description of the commands you'll be using.
 
-The first thing you must know is that, in general, there are two key elements required to execute a BASH command:
+The first thing you must know is that, the basic syntax for executing a command requires at least two elements:
 
  1. The program, which will execute an specific task;
  2. The file or input data the program will work on;
 
-Optional flags that modify the behavior of the program. The available flags for each program can be accessed by typing `name-of-program --help`. Try it with the commands you'll learn below.
+Optional flags, that modify the behavior of the program, can also be used. The available flags for each program can be accessed by typing `PROGRAM --help` (for examples: `ls --help`).
 
 ## Commands
 
 Learn the commands below as they're the most used ones in BASH:
 
 - `ls` – listing the content of a folder
-- `cd` – to access different folders
-- `pwd` – shows your current folder
-- `cp` – copy file(s) or folder(s)
-- `mv` – move file(s) or folder(s)
+- `cd` – used to access different folders
+- `pwd` – shows your current folder (or PATH) in the file system
+- `cp` – copy file(s) or folder(s) to a new location
+- `mv` – move file(s) or folder(s) to a new location
 - `rm` – remove/erase file(s) or folder(s)
 - `mkdir` – create new folder
 - `touch` – create new file
-- `wc` – word count will give total characters, words and lines
-- `head` – print the first 10 lines of a file
-- `tail` – print the last 10 lines of a file
+- `wc` – shows the total number of characters, words and lines of a file
+- `head` – print the first 10 (default) lines of a file
+- `tail` – print the last 10 (default) lines of a file
 - `more` – show the content of a file progressively (good for big files)
-- `sort` – organize your data by specific order
+- `sort` – organize your data by specific order of a given column 
 - `cut` – print selected columns from a file
 - `grep` – used to search for patterns in a file
-- `paste` – merges the content of one file with a second file side-by-sing horizontally
+- `paste` – merges the content of one file with a second file side-by-sing (horizontally)
 - `cat` – show the content of a file
 - `sed` – stream editor for filtering and transforming text
 - `awk` – a programming language for pattern scanning and processing
@@ -65,52 +65,44 @@ Learn the commands below as they're the most used ones in BASH:
 ## Exercises
 
 ### Exercise 1
-Open your terminal and execute the commands below to practice BASH commands. Write down the output of each coommand as we will check it at the end of this exercise. Before and ffter executing each command, type `ls` and press `ENTER` to see the content of your current folder (and how the content changes after each command).
-Please, note that the `$` symbol represents the terminal prompt and should not be typed.
+Use your terminal to run the commands below to practice BASH. Write down the output of each coommand as we will check it at the end of this exercise. 
+Before and after executing each command, type `ls` and press `ENTER` to see the content of your current folder (and how this content changes after each command).
+
 ```bash
+# Please, note that the `$` symbol represents the terminal prompt and should not be typed.
 $ mkdir course_folder
 $ cd course_folder
 $ pwd
 $ touch course_file.txt
-$ mkdir folder
-$ mv course_file.txt folder/
-$ cd folder/
+$ mkdir course_folder2
+$ mv course_file.txt course_folder2/
+$ cd course_folder2/
 $ cp course_file.txt ../
 $ cd ..
 $ rm course_file.txt
-$ rm -r folder/
+$ rm -r course_folder2/
 ```
 ::::::::::::::::::::::::::::::::::::: challenge
 
 ## Challenge 1: Order the sequence of events from the commands above
 
-- Go to ther new folder.
-- Enter a folder you’ve created.
-- Create a new directory to work.
-- Move your empty file to the folder you`ve just created.
-- Show your current path.
-- Erase the folder you've created
-- Erase course_file.txt at your current folder.
-- Create a new folder.
-- Copy course_file.txt to the previous folder on your current path.
-- Create a file.
-- Go to the previous folder on your current path.
+- Click the output box below to reveal the correct order of events from the commands above.
 
 :::::::::::::::::::::::: solution
 
 ## Output
 
-1. Create a new directory to work.
+1. Create a new directory to work called `course_folder`.
 2. Enter a folder you’ve created.
-3. Show your current path.
-4. Create a file.
-5. Create a new folder.
-6. Move your empty file to the folder you`ve just created.
+3. Show your current directory (or path).
+4. Creates a file.
+5. Creates a new course_folder2.
+6. Move your empty file to the second folder you`ve created.
 7. Go to ther new folder.
-8. Copy course_file.txt to the previous folder on your current path.
-9. Go to the previous folder on your current path.
+8. Copy course_file.txt to the previous folder from your current directory (or path).
+9. Go to the previous folder from your current path.
 10. Erase course_file.txt at your current folder.
-11. Erase the folder you've created.
+11. Erase the second folder you've created.
 
 ::::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -124,11 +116,7 @@ $ rm -r folder/
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ### Exercise 2
-
-In order to run the next exercise, make sure you're in the `sample_data` folder where you started before. If not, type `cd ~/sample_data` to get back to it.
-Create a new file named table.tsv and paste the content below into it.
-In order to create and edit the file, you can use `vim table.tsv` command. Copy the data below (don't forget the header) and past the content at the terminal, press `ESC`, then `:`, then `wq` and press `ENTER` to save and exit vim editor.
-
+This exercise requires creating first a new file named table.tsv. The content of the file was placed below. Please select and copy all the content below (including the header) to create the file.
 ```plaintext
 GeneID	Expression	Annotation
 Gene001	23.5	Putative Kinase Gene
@@ -144,7 +132,12 @@ Gene010	42.7	Putative Regulator Gene
 Gene011	29.3	Chaperone
 Gene012	53.8	Metabolic Enzyme
 ```
-And here are the commands to practice with this new file. Remember to write down the output of each command as we will check it at the end of this exercise.
+To create the file, run the next command to create it:
+```bash
+$ vim table.tsv
+```
+As you can see, your terminal now looks different. `Vim` is a text editor, so please paste the content you've copied from above at your terminal. USE THE ARROWS IF YOU NEED TO MAKE ANY CORRECTION TO THE TEXT AT ANY GIVEN ROW (the mouse will not work). Then press `ESC`, then `:`, then `wq` and finally `ENTER` to save and exit vim editor.
+Once the above is complete, please run the commands below to practice with the new table. Remember to write down the output of each command as we will check it at the end of this exercise.
 ```bash
 $ wc table.tsv
 $ head table.tsv
@@ -161,16 +154,7 @@ $ paste table.tsv annotations.txt > merged.tsv
 
 ## Challenge 2: Order the sequence of events from the commands above
 
-- Print only the second column from the file.
-- Print the last 10 lines.
-- Print the first 10 lines.
-- Copy the content of the third column to a new file named annotations.txt.
-- Get the counts of characters, words and lines from your file.
-- Search the occurrence of a specific pattern "putative" at the file.
-- Merge the content of both files, table.tsv and annotations.txt, into a new file named merged.tsv.
-- Replace the word "Putative" with "Unknown" throughout the file and print the first 5 lines only.
-- Show the content of the whole file progressively; `cat` may also be used to show the content of a file but it does not allow progressive visualization.
-- Print the file in an alfabetically ordered fashion by the element at the third column on each line
+- Click the output box below to reveal the correct order of events from the commands above.
 
 :::::::::::::::::::::::: solution
 
