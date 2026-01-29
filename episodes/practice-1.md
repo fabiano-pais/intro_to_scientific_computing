@@ -57,8 +57,8 @@ Learn the commands below as they're the most used ones in BASH:
 ::::::::::::::::::::::::::::::::::::: callout
 
 - Also consider accessing (https://linuxcommand.org/lc3_man_page_index.php) for more information about BASH commands.
-- Use up/down arrows on your keyboard to check previously executed commands.
-- When typing long commands, use the tab key to autocomplete program names and file/folder names.
+- Use up/down arrows on your keyboard to check the history of previously executed commands.
+- When typing long words (command, file or folder), use the tab key to autocomplete program names and file/folder names.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -84,9 +84,9 @@ $ rm -r course_folder2/
 ```
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 1: Order the sequence of events from the commands above
+## Challenge 1: Reveal the sequence of events from the commands above
 
-- Click the output box below to reveal the correct order of events from the commands above.
+- Click the output box below to reveal the events from each of the commands above.
 
 :::::::::::::::::::::::: solution
 
@@ -102,7 +102,7 @@ $ rm -r course_folder2/
 8. Copy course_file.txt to the previous folder from your current directory (or path).
 9. Go to the previous folder from your current path.
 10. Erase course_file.txt at your current folder.
-11. Erase the second folder you've created.
+11. Erase recursively the second folder you've created.
 
 ::::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -136,6 +136,7 @@ To create the file, run the next command to create it:
 ```bash
 $ vim table.tsv
 ```
+
 As you can see, your terminal now looks different. `Vim` is a text editor, so please paste the content you've copied from above at your terminal. USE THE ARROWS IF YOU NEED TO MAKE ANY CORRECTION TO THE TEXT AT ANY GIVEN ROW (the mouse will not work). Then press `ESC`, then `:`, then `wq` and finally `ENTER` to save and exit vim editor.
 Once the above is complete, please run the commands below to practice with the new table. Remember to write down the output of each command as we will check it at the end of this exercise.
 ```bash
@@ -149,10 +150,11 @@ $ cut -f 3 table.tsv > annotations.txt
 $ grep 'Putative' table.tsv | head -n 5
 $ sed 's/Putative/Unknown/g' table.tsv
 $ paste table.tsv annotations.txt > merged.tsv
-````
-::::::::::::::::::::::::::::::::::::: challenge 
+```
 
-## Challenge 2: Order the sequence of events from the commands above
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Challenge 2: Reveal the sequence of events from the commands above
 
 - Click the output box below to reveal the correct order of events from the commands above.
 
