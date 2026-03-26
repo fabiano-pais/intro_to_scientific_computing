@@ -23,10 +23,12 @@ You are now ready to start learning BASH commands in the terminal environment pr
 
 ## During the lesson
 
+Our team will be available during the training to help you with any issues you may encounter. If you have questions or need assistance, please do not hesitate to reach out.
+
 ::::::::::::::::::::::::::::::::::::::: callout
 
-### Need support?
+### No time to finish the exercices?
 
-Our team will be available during the training to help you with any issues you may encounter. If you have questions or need assistance, please don't hesitate to reach out.
+You may access this website anytime. Please continue at your conveniance.
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::
