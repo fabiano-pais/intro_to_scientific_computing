@@ -6,7 +6,7 @@ exercises: 10 # exercise time in minutes
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- Have you set up your Google account yet?
+- Before we start, have you set up your Google account yet?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -25,8 +25,8 @@ Scroll down to find a series of exercises that will help you practice the most i
 
 The first thing you must know is that, the basic syntax for executing a command requires at least two elements:
 
- 1. The command, which will execute an specific task;
- 2. The file or input data the command will work on.;
+ 1. The command, which will execute an specific task
+ 2. The file or input data at which the command will act on
 
 Optional flags, that modify the behavior of the command, can also be used. The available flags for each command can be accessed by typing `command --help` (for example: `ls --help`).
 
@@ -40,8 +40,8 @@ Learn the commands below as they're the most used ones in BASH:
 - `cp` – copy file(s) or folder(s) to a new location
 - `mv` – move file(s) or folder(s) to a new location
 - `rm` – remove/erase file(s) or folder(s)
-- `mkdir` – create new folder
-- `touch` – create new file
+- `mkdir` – create new folder (make directory)
+- `touch` – create new (empty) file
 - `wc` – shows the total number of characters, words and lines of a file
 - `head` – print the first 10 (default) lines of a file
 - `tail` – print the last 10 (default) lines of a file
@@ -49,16 +49,16 @@ Learn the commands below as they're the most used ones in BASH:
 - `sort` – organize your data by specific order of a given column 
 - `cut` – print selected columns from a file
 - `grep` – used to search for patterns in a file
-- `paste` – merges the content of one file with a second file side-by-sing (horizontally)
-- `cat` – show the content of a file
+- `paste` – merges the content of one file with a second file line-by-line (horizontally)
+- `cat` – show the content of a file, also used to concatenate files
 - `sed` – stream editor for filtering and transforming text
-- `awk` – a programming language for pattern scanning and processing
+- `awk` – programming language for pattern scanning and processing
 
 ::::::::::::::::::::::::::::::::::::: callout
 
 - Also consider accessing (https://linuxcommand.org/lc3_man_page_index.php) for more information about BASH commands.
 - Use up/down arrows on your keyboard to check the history of previously executed commands.
-- When typing long words (command, file or folder), use the tab key to autocomplete program names and file/folder names.
+- When typing long words (command, file or folder), use the tab key of your keyboard to autocomplete program names and file/folder names.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -69,7 +69,9 @@ Use your terminal to run the commands below to practice BASH. Write down the out
 Before and after executing each command, type `ls` and press `ENTER` to see the content of your current folder (and how this content changes after each command).
 
 ```bash
-# Please, note that the `$` symbol represents the terminal prompt and should not be typed.
+# Please note:
+# The `$` symbol represents the terminal prompt and should NOT be typed
+
 $ mkdir course_folder
 $ cd course_folder
 $ pwd
@@ -109,9 +111,9 @@ $ rm -r course_folder2/
 
 ::::::::::::::::::::::::::::::::::::: callout
 
-- You can combine commands using the pipe operator (|) to create more complex workflows.
-- You can redirect the standard output from one command to new files using the greater-than symbol (>). Example: `head -n 5 table.tsv > top5.tsv` will create a new file named top5.tsv containing the first 5 lines of table.tsv.
-- Type “history” to see (at the standout) the commands you’ve entered previously.
+- You can combine commands using the pipe operator (`|`) to create more complex workflows.
+- You can redirect the standard output from one command to a new file using the greater-than symbol (`>`). Example: `head -n 5 table.tsv > top5.tsv` will create a new file named top5.tsv containing the first 5 lines of table.tsv.
+- Type `history` and you will see (in the standout) the commands you’ve entered previously.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -131,13 +133,17 @@ Gene009	15.4	Receptor
 Gene010	42.7	Putative Regulator Gene
 Gene011	29.3	Chaperone
 Gene012	53.8	Metabolic Enzyme
-```
-To create the file, run the next command to create it:
-```bash
-$ vim table.tsv
-```
 
-As you can see, your terminal now looks different. `Vim` is a text editor, so please paste the content you've copied from above at your terminal. USE THE ARROWS IF YOU NEED TO MAKE ANY CORRECTION TO THE TEXT AT ANY GIVEN ROW (the mouse will not work). Then press `ESC`, then `:`, then `wq` and finally `ENTER` to save and exit vim editor.
+
+To create the file, run the next command to create it:
+
+`$ vim table.tsv`
+
+
+As you can see, your terminal now looks different. `Vim` is a text editor, so please paste `ctrl c` the content you've copied from above at your terminal. USE THE ARROWS IF YOU NEED TO MAKE ANY CORRECTION TO THE TEXT AT ANY GIVEN ROW (the mouse will not work).
+
+Then press `ESC`, press `:`, then type `wq` and finally `ENTER` to write the content you've pasted, save the file and exit vim editor.
+
 Once the above is complete, please run the commands below to practice with the new table. Remember to write down the output of each command as we will check it at the end of this exercise.
 ```bash
 $ wc table.tsv
@@ -156,7 +162,7 @@ $ paste table.tsv annotations.txt > merged.tsv
 
 ## Challenge 2: Reveal the sequence of events from the commands above
 
-- Click the output box below to reveal the correct order of events from the commands above.
+- Click the output box below to reveal the outputs from the commands above.
 
 :::::::::::::::::::::::: solution
 
