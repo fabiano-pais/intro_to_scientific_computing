@@ -329,7 +329,7 @@
         
 <section id="aio-introduction"><p>Content from <a href="introduction.html">Everything you need to know before getting started</a></p>
 <hr>
-<p>Last updated on 2026-03-26 |
+<p>Last updated on 2026-05-18 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -367,16 +367,16 @@
 <p>Scientific computing is all about solving problems using computers.
 The complexity of the problem might require proficiency in one or more
 programing languages. You may need to be able to write Python or R
-scripts at some point, but you’ll definetly need to know BASH for a
-start. BASH is a very simple programming language, or a shell actually,
-and one that can connect you to a remote high performance computer
-(HPC). In order to learn BASH, you’ll need to work with a command-line
-application, such as a terminal.</p>
+scripts at some point, but you’ll definetly need to know BASH to start
+working in a computer environment. BASH is a very simple programming
+language, or a shell actually, and one that can connect you to a remote
+high performance computer (HPC). In order to learn BASH, you’ll need to
+work with a command-line application, such as a terminal.</p>
 <p>Here, you’ll learn the most important commands in BASH so you can
 carry on your jobs. This will be achieved by working through a series of
-exercises using a terminal within Google Colab as the main interface.
+exercises using a terminal within Google Colab as the main environment.
 You’ll be given instructions on how to open a terminal within Google
-Colab at the next episode. However, if you don’t have a Google account
+Colab at the next session. However, if you don’t have a Google account
 yet, please create one before continuing.</p>
 <div id="callout1" class="callout">
 <div class="callout-square">
@@ -395,27 +395,27 @@ reading additional documentation (widely available online).</p>
 </h2>
 <hr class="half-width">
 <p>It’s a program that allows you to communicate with your computer
-throught a commnand-line environment. So, basically, you’ll interact
-with the computer only by entering commands to perform specific tasks.
-It’s mainly operated throughout the keyboard, altough there are
-Terminals that provide a small interaction with the mouse.</p>
+throught a commnand-line application. So, basically, you’ll interact
+with the computer only by entering commands to run specific tasks. It’s
+mainly operated throughout the keyboard, altough there are Terminals
+that provide a small interaction with the mouse.</p>
 <p>Although most Operating Systems (OS) provide beatifull graphical user
 interfaces (GUIs), Terminals are still widely used by programmers and
 data scientists. Terminals are very powerfull, and once you get used to
 them, you’ll be able to perform tasks much faster than using a GUI. If
 you need to access a remote machine, i.e. an HPC, you will mostlikely do
 it using a Terminal. HPCs can provide users with more computer cores and
-memory for performing advanced tasks for complex data analysis.</p>
+memory for performing advanced tasks for data analysis.</p>
 <p>Many Terminals are availables for each OS. We strongly suggest VSCode
 (<a href="https://code.visualstudio.com" class="external-link uri">https://code.visualstudio.com</a>), which is freely
 available to all OS. Yoy may also like Warp (<a href="https://www.warp.dev/j" class="external-link uri">https://www.warp.dev/j</a>).</p>
 </section><section><h2 class="section-heading" id="shell">Shell<a class="anchor" aria-label="anchor" href="#shell"></a>
 </h2>
 <hr class="half-width">
-<p>Shell is a part of the software that interprets the commands entered
-via the keyboard. BASH is (probably) the most popular Shell, but there
-are others, such as ZSH and PowerShell. You can switch between Shells,
-but you need to be aware that some commands may differ slightly between
+<p>Shell is a computer program that provide access to the system
+hardware. BASH is (probably) the most popular Shell, but there are
+others, such as ZSH and PowerShell. You can switch between Shells, but
+you need to be aware that some commands may differ slightly between
 them. Confirguration files are also different, and therefore cannot just
 been shared between them. Shells that are POSIX-compliant (such as BASH
 and ZSH) share a lot of similarities, so most commands will work in both
@@ -443,7 +443,7 @@ its native Operating System?</h3>
   Output
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>ZSH is the main MacOS shell; BASH is the main one for Linux;
 PowerShell is the Windows main shell.</p>
@@ -455,24 +455,25 @@ PowerShell is the Windows main shell.</p>
 </h2>
 <hr class="half-width">
 <p>BASH was developed by Brian Fox in 1988, and first released in 1989.
-Like any programming language, it can be used to automate tasks, and
-that’s a powerfull thing. Since it was one of the first programming
-languages ported by Linus Torvalds to Linux, it has become the default
-shell on most Linux distributions. BASH supports a wide range of
-functionalities, such as using variables and arrays as data structures.
-By default, BASH reads user code one line at a time, but it can also
-read scripts containing multiple lines of code. BASH scripts are plain
-text files with a <code>.sh</code> extension that can be executed in the
-terminal in a non-interactive way and whithout user intervention.</p>
-<div id="swithing-between-shells" class="callout">
+Like programming languages, it can be used to automate tasks. Since it
+was one of the first computer programs ported by Linus Torvalds to
+Linux, it has become the default shell on most Linux distributions. BASH
+supports a wide range of functionalities, such as using variables and
+arrays as data structures as well as special characters in
+<code>regular expressions</code>. By default, BASH reads user code one
+line at a time, but it can also read scripts containing multiple lines
+of code in the form of loops. Simple BASH scripts are plain text files
+with a <code>.sh</code> extension, and can be executed in the terminal
+in a non-interactive way and whithout user intervention.</p>
+<div id="switching-between-shells" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <span class="callout-header">Callout</span>
-<div id="swithing-between-shells" class="callout-inner">
-<h3 class="callout-title">Swithing between Shells</h3>
+<div id="switching-between-shells" class="callout-inner">
+<h3 class="callout-title">Switching between Shells</h3>
 <div class="callout-content">
-<p>It’s entirely possible to swith between different shells. For
+<p>It’s entirely possible to switch between different shells. For
 example, if you are using ZSH and want to switch to BASH on a macOS, you
 can simply type <code>bash</code> in the terminal. To return to ZSH,
 type <code>zsh</code>. There are other shells available, such as
@@ -488,7 +489,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-practice-1"><p>Content from <a href="practice-1.html">Hands-on Practice with BASH</a></p>
 <hr>
-<p>Last updated on 2026-01-29 |
+<p>Last updated on 2026-05-18 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/practice-1.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -502,7 +503,7 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>Have you set up your Google account yet?</li>
+<li>Before we start, have you set up your Google account yet?</li>
 </ul>
 </div>
 </div>
@@ -536,8 +537,8 @@ see a brief description of the commands you’ll be using.</p>
 <p>The first thing you must know is that, the basic syntax for executing
 a command requires at least two elements:</p>
 <ol style="list-style-type: decimal">
-<li>The command, which will execute an specific task;</li>
-<li>The file or input data the command will work on.;</li>
+<li>The command, which will execute an specific task</li>
+<li>The file or input data at which the command will act on</li>
 </ol>
 <p>Optional flags, that modify the behavior of the command, can also be
 used. The available flags for each command can be accessed by typing
@@ -561,9 +562,9 @@ system</li>
 <li>
 <code>rm</code> – remove/erase file(s) or folder(s)</li>
 <li>
-<code>mkdir</code> – create new folder</li>
+<code>mkdir</code> – create new folder (make directory)</li>
 <li>
-<code>touch</code> – create new file</li>
+<code>touch</code> – create new (empty) file</li>
 <li>
 <code>wc</code> – shows the total number of characters, words and
 lines of a file</li>
@@ -584,14 +585,15 @@ column</li>
 <code>grep</code> – used to search for patterns in a file</li>
 <li>
 <code>paste</code> – merges the content of one file with a second
-file side-by-sing (horizontally)</li>
+file line-by-line (horizontally)</li>
 <li>
-<code>cat</code> – show the content of a file</li>
+<code>cat</code> – show the content of a file, also used to
+concatenate files</li>
 <li>
 <code>sed</code> – stream editor for filtering and transforming
 text</li>
 <li>
-<code>awk</code> – a programming language for pattern scanning and
+<code>awk</code> – programming language for pattern scanning and
 processing</li>
 </ul>
 <div id="callout1" class="callout">
@@ -606,8 +608,8 @@ processing</li>
 more information about BASH commands.</li>
 <li>Use up/down arrows on your keyboard to check the history of
 previously executed commands.</li>
-<li>When typing long words (command, file or folder), use the tab key to
-autocomplete program names and file/folder names.</li>
+<li>When typing long words (command, file or folder), use the tab key of
+your keyboard to autocomplete program names and file/folder names.</li>
 </ul>
 </div>
 </div>
@@ -626,18 +628,20 @@ and press <code>ENTER</code> to see the content of your current folder
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="co"># Please, note that the `$` symbol represents the terminal prompt and should not be typed.</span></span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1" aria-label="code-block-1-2"></a><span class="ex">$</span> mkdir course_folder</span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1" aria-label="code-block-1-3"></a><span class="ex">$</span> cd course_folder</span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1" aria-label="code-block-1-4"></a><span class="ex">$</span> pwd</span>
-<span id="cb1-5"><a href="#cb1-5" tabindex="-1" aria-label="code-block-1-5"></a><span class="ex">$</span> touch course_file.txt</span>
-<span id="cb1-6"><a href="#cb1-6" tabindex="-1" aria-label="code-block-1-6"></a><span class="ex">$</span> mkdir course_folder2</span>
-<span id="cb1-7"><a href="#cb1-7" tabindex="-1" aria-label="code-block-1-7"></a><span class="ex">$</span> mv course_file.txt course_folder2/</span>
-<span id="cb1-8"><a href="#cb1-8" tabindex="-1" aria-label="code-block-1-8"></a><span class="ex">$</span> cd course_folder2/</span>
-<span id="cb1-9"><a href="#cb1-9" tabindex="-1" aria-label="code-block-1-9"></a><span class="ex">$</span> cp course_file.txt ../</span>
-<span id="cb1-10"><a href="#cb1-10" tabindex="-1" aria-label="code-block-1-10"></a><span class="ex">$</span> cd ..</span>
-<span id="cb1-11"><a href="#cb1-11" tabindex="-1" aria-label="code-block-1-11"></a><span class="ex">$</span> rm course_file.txt</span>
-<span id="cb1-12"><a href="#cb1-12" tabindex="-1" aria-label="code-block-1-12"></a><span class="ex">$</span> rm <span class="at">-r</span> course_folder2/</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="co"># Please note:</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1" aria-label="code-block-1-2"></a><span class="co"># The `$` symbol represents the terminal prompt and should NOT be typed</span></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1" aria-label="code-block-1-3"></a></span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1" aria-label="code-block-1-4"></a><span class="ex">$</span> mkdir course_folder</span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1" aria-label="code-block-1-5"></a><span class="ex">$</span> cd course_folder</span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1" aria-label="code-block-1-6"></a><span class="ex">$</span> pwd</span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1" aria-label="code-block-1-7"></a><span class="ex">$</span> touch course_file.txt</span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1" aria-label="code-block-1-8"></a><span class="ex">$</span> mkdir course_folder2</span>
+<span id="cb1-9"><a href="#cb1-9" tabindex="-1" aria-label="code-block-1-9"></a><span class="ex">$</span> mv course_file.txt course_folder2/</span>
+<span id="cb1-10"><a href="#cb1-10" tabindex="-1" aria-label="code-block-1-10"></a><span class="ex">$</span> cd course_folder2/</span>
+<span id="cb1-11"><a href="#cb1-11" tabindex="-1" aria-label="code-block-1-11"></a><span class="ex">$</span> cp course_file.txt ../</span>
+<span id="cb1-12"><a href="#cb1-12" tabindex="-1" aria-label="code-block-1-12"></a><span class="ex">$</span> cd ..</span>
+<span id="cb1-13"><a href="#cb1-13" tabindex="-1" aria-label="code-block-1-13"></a><span class="ex">$</span> rm course_file.txt</span>
+<span id="cb1-14"><a href="#cb1-14" tabindex="-1" aria-label="code-block-1-14"></a><span class="ex">$</span> rm <span class="at">-r</span> course_folder2/</span></code></pre>
 </div>
 <div id="challenge-1-reveal-the-sequence-of-events-from-the-commands-above" class="callout challenge">
 <div class="callout-square">
@@ -662,7 +666,7 @@ commands above.</li>
   Output
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Create a new directory to work called
@@ -691,14 +695,14 @@ directory (or path).</li>
 <div class="callout-inner">
 <div class="callout-content">
 <ul>
-<li>You can combine commands using the pipe operator (|) to create more
-complex workflows.</li>
-<li>You can redirect the standard output from one command to new files
-using the greater-than symbol (&gt;). Example:
+<li>You can combine commands using the pipe operator (<code>|</code>) to
+create more complex workflows.</li>
+<li>You can redirect the standard output from one command to a new file
+using the greater-than symbol (<code>&gt;</code>). Example:
 <code>head -n 5 table.tsv &gt; top5.tsv</code> will create a new file
 named top5.tsv containing the first 5 lines of table.tsv.</li>
-<li>Type “history” to see (at the standout) the commands you’ve entered
-previously.</li>
+<li>Type <code>history</code> and you will see (in the standout) the
+commands you’ve entered previously.</li>
 </ul>
 </div>
 </div>
@@ -722,36 +726,30 @@ Gene008	89.0	Signal Transducer
 Gene009	15.4	Receptor
 Gene010	42.7	Putative Regulator Gene
 Gene011	29.3	Chaperone
-Gene012	53.8	Metabolic Enzyme</code></pre>
-<p>To create the file, run the next command to create it:</p>
-<div class="codewrapper sourceCode" id="cb3">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="ex">$</span> vim table.tsv</span></code></pre>
-</div>
-<p>As you can see, your terminal now looks different. <code>Vim</code>
-is a text editor, so please paste the content you’ve copied from above
-at your terminal. USE THE ARROWS IF YOU NEED TO MAKE ANY CORRECTION TO
-THE TEXT AT ANY GIVEN ROW (the mouse will not work). Then press
-<code>ESC</code>, then <code>:</code>, then <code>wq</code> and finally
-<code>ENTER</code> to save and exit vim editor. Once the above is
-complete, please run the commands below to practice with the new table.
-Remember to write down the output of each command as we will check it at
-the end of this exercise.</p>
-<div class="codewrapper sourceCode" id="cb4">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a><span class="ex">$</span> wc table.tsv</span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1" aria-label="code-block-4-2"></a><span class="ex">$</span> head table.tsv</span>
-<span id="cb4-3"><a href="#cb4-3" tabindex="-1" aria-label="code-block-4-3"></a><span class="ex">$</span> tail table.tsv</span>
-<span id="cb4-4"><a href="#cb4-4" tabindex="-1" aria-label="code-block-4-4"></a><span class="ex">$</span> more table.tsv</span>
-<span id="cb4-5"><a href="#cb4-5" tabindex="-1" aria-label="code-block-4-5"></a><span class="ex">$</span> sort <span class="at">-k3</span> table.tsv</span>
-<span id="cb4-6"><a href="#cb4-6" tabindex="-1" aria-label="code-block-4-6"></a><span class="ex">$</span> cut <span class="at">-f</span> 2 table.tsv</span>
-<span id="cb4-7"><a href="#cb4-7" tabindex="-1" aria-label="code-block-4-7"></a><span class="ex">$</span> cut <span class="at">-f</span> 3 table.tsv <span class="op">&gt;</span> annotations.txt</span>
-<span id="cb4-8"><a href="#cb4-8" tabindex="-1" aria-label="code-block-4-8"></a><span class="ex">$</span> grep <span class="st">'Putative'</span> table.tsv <span class="kw">|</span> <span class="fu">head</span> <span class="at">-n</span> 5</span>
-<span id="cb4-9"><a href="#cb4-9" tabindex="-1" aria-label="code-block-4-9"></a><span class="ex">$</span> sed <span class="st">'s/Putative/Unknown/g'</span> table.tsv</span>
-<span id="cb4-10"><a href="#cb4-10" tabindex="-1" aria-label="code-block-4-10"></a><span class="ex">$</span> paste table.tsv annotations.txt <span class="op">&gt;</span> merged.tsv</span></code></pre>
-</div>
+Gene012	53.8	Metabolic Enzyme
+
+
+To create the file, run the next command to create it:
+
+`$ vim table.tsv`
+
+
+As you can see, your terminal now looks different. `Vim` is a text editor, so please paste `ctrl c` the content you've copied from above at your terminal. USE THE ARROWS IF YOU NEED TO MAKE ANY CORRECTION TO THE TEXT AT ANY GIVEN ROW (the mouse will not work).
+
+Then press `ESC`, press `:`, then type `wq` and finally `ENTER` to write the content you've pasted, save the file and exit vim editor.
+
+Once the above is complete, please run the commands below to practice with the new table. Remember to write down the output of each command as we will check it at the end of this exercise.
+```bash
+$ wc table.tsv
+$ head table.tsv
+$ tail table.tsv
+$ more table.tsv
+$ sort -k3 table.tsv
+$ cut -f 2 table.tsv
+$ cut -f 3 table.tsv &gt; annotations.txt
+$ grep 'Putative' table.tsv | head -n 5
+$ sed 's/Putative/Unknown/g' table.tsv
+$ paste table.tsv annotations.txt &gt; merged.tsv</code></pre>
 <div id="challenge-2-reveal-the-sequence-of-events-from-the-commands-above" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -762,8 +760,8 @@ the end of this exercise.</p>
 from the commands above</h3>
 <div class="callout-content">
 <ul>
-<li>Click the output box below to reveal the correct order of events
-from the commands above.</li>
+<li>Click the output box below to reveal the outputs from the commands
+above.</li>
 </ul>
 </div>
 </div>
@@ -775,7 +773,7 @@ from the commands above.</li>
   Output
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Get the counts of characters, words and lines from your file.</li>
@@ -939,7 +937,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-practice-3"><p>Content from <a href="practice-3.html">Advanced practice with BASH</a></p>
 <hr>
-<p>Last updated on 2026-01-16 |
+<p>Last updated on 2026-05-18 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/practice-3.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1137,7 +1135,9 @@ beginner to a more advanced level in BASH. You should now be comfortable
 using BASH commands to navigate the file system, edit files, and perform
 different data processing tasks. Keep practicing these commands to
 reinforce your skills and explore more advanced features of BASH as you
-progress in your scientific computing journey.</li>
+progress in your scientific computing journey. And please remember that
+our group is here to help. Do not hesitate to contact us if you need
+addtional help.</li>
 </ul>
 </div>
 </div>
@@ -1195,9 +1195,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://carpentries.github.io/workbench-template-md/aio.html",
   "identifier": "https://carpentries.github.io/workbench-template-md/aio.html",
-  "dateCreated": "2026-03-26",
-  "dateModified": "2026-05-12",
-  "datePublished": "2026-05-12"
+  "dateCreated": "2026-05-18",
+  "dateModified": "2026-05-18",
+  "datePublished": "2026-05-18"
 }
 
   </script><script>
