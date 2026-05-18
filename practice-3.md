@@ -104,7 +104,7 @@ done < mnist_test.csv
 
 ::::::::::::::::::::::::::::::::::::: callout
 
-- Congratulations! You've completed now a range of exercices from beginner to a more advanced level in BASH. You should now be comfortable using BASH commands to navigate the file system, edit files, and perform different data processing tasks. Keep practicing these commands to reinforce your skills and explore more advanced features of BASH as you progress in your scientific computing journey.
+- Congratulations! You've completed now a range of exercices from beginner to a more advanced level in BASH. You should now be comfortable using BASH commands to navigate the file system, edit files, and perform different data processing tasks. Keep practicing these commands to reinforce your skills and explore more advanced features of BASH as you progress in your scientific computing journey. And please remember that our group is here to help. Do not hesitate to contact us if you need addtional help.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
