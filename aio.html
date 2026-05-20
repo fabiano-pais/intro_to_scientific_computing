@@ -81,7 +81,7 @@
 </div>
     </div>
   </div>
-  <hr></header><nav class="navbar navbar-expand-xl bottom-nav software" aria-label="Main Navigation"><div class="container-fluid nav-container">
+</header><nav class="navbar navbar-expand-xl bottom-nav software" aria-label="Main Navigation"><div class="container-fluid nav-container">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle Navigation">
       <span class="navbar-toggler-icon"></span>
       <span class="menu-title">Menu</span>
@@ -198,8 +198,7 @@
             </div>
 <!--/div.col -->
 
-            <hr>
-</div>
+          </div>
 <!--/div.mobile-row -->
 
           <div class="accordion accordion-flush" id="accordion-chapters-toggle">
@@ -443,7 +442,7 @@ its native Operating System?</h3>
   Output
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>ZSH is the main MacOS shell; BASH is the main one for Linux;
 PowerShell is the Windows main shell.</p>
@@ -489,7 +488,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-practice-1"><p>Content from <a href="practice-1.html">Hands-on Practice with BASH</a></p>
 <hr>
-<p>Last updated on 2026-05-18 |
+<p>Last updated on 2026-05-20 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/practice-1.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -666,7 +665,7 @@ commands above.</li>
   Output
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Create a new directory to work called
@@ -726,30 +725,34 @@ Gene008	89.0	Signal Transducer
 Gene009	15.4	Receptor
 Gene010	42.7	Putative Regulator Gene
 Gene011	29.3	Chaperone
-Gene012	53.8	Metabolic Enzyme
-
-
-To create the file, run the next command to create it:
-
-`$ vim table.tsv`
-
-
-As you can see, your terminal now looks different. `Vim` is a text editor, so please paste `ctrl c` the content you've copied from above at your terminal. USE THE ARROWS IF YOU NEED TO MAKE ANY CORRECTION TO THE TEXT AT ANY GIVEN ROW (the mouse will not work).
-
-Then press `ESC`, press `:`, then type `wq` and finally `ENTER` to write the content you've pasted, save the file and exit vim editor.
-
-Once the above is complete, please run the commands below to practice with the new table. Remember to write down the output of each command as we will check it at the end of this exercise.
-```bash
-$ wc table.tsv
-$ head table.tsv
-$ tail table.tsv
-$ more table.tsv
-$ sort -k3 table.tsv
-$ cut -f 2 table.tsv
-$ cut -f 3 table.tsv &gt; annotations.txt
-$ grep 'Putative' table.tsv | head -n 5
-$ sed 's/Putative/Unknown/g' table.tsv
-$ paste table.tsv annotations.txt &gt; merged.tsv</code></pre>
+Gene012	53.8	Metabolic Enzyme</code></pre>
+<p>To create the file, run the next command to create it:</p>
+<p><code>$ vim table.tsv</code></p>
+<p>As you can see, your terminal now looks different. <code>Vim</code>
+is a text editor, so please paste <code>ctrl c</code> the content you’ve
+copied from above at your terminal. USE THE ARROWS IF YOU NEED TO MAKE
+ANY CORRECTION TO THE TEXT AT ANY GIVEN ROW (the mouse will not
+work).</p>
+<p>Then press <code>ESC</code>, press <code>:</code>, then type
+<code>wq</code> and finally <code>ENTER</code> to write the content
+you’ve pasted, save the file and exit vim editor.</p>
+<p>Once the above is complete, please run the commands below to practice
+with the new table. Remember to write down the output of each command as
+we will check it at the end of this exercise.</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="ex">$</span> wc table.tsv</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1" aria-label="code-block-3-2"></a><span class="ex">$</span> head table.tsv</span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1" aria-label="code-block-3-3"></a><span class="ex">$</span> tail table.tsv</span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1" aria-label="code-block-3-4"></a><span class="ex">$</span> more table.tsv</span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1" aria-label="code-block-3-5"></a><span class="ex">$</span> sort <span class="at">-k3</span> table.tsv</span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1" aria-label="code-block-3-6"></a><span class="ex">$</span> cut <span class="at">-f</span> 2 table.tsv</span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1" aria-label="code-block-3-7"></a><span class="ex">$</span> cut <span class="at">-f</span> 3 table.tsv <span class="op">&gt;</span> annotations.txt</span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1" aria-label="code-block-3-8"></a><span class="ex">$</span> grep <span class="st">'Putative'</span> table.tsv <span class="kw">|</span> <span class="fu">head</span> <span class="at">-n</span> 5</span>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1" aria-label="code-block-3-9"></a><span class="ex">$</span> sed <span class="st">'s/Putative/Unknown/g'</span> table.tsv</span>
+<span id="cb3-10"><a href="#cb3-10" tabindex="-1" aria-label="code-block-3-10"></a><span class="ex">$</span> paste table.tsv annotations.txt <span class="op">&gt;</span> merged.tsv</span></code></pre>
+</div>
 <div id="challenge-2-reveal-the-sequence-of-events-from-the-commands-above" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -773,7 +776,7 @@ above.</li>
   Output
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Get the counts of characters, words and lines from your file.</li>
@@ -1097,7 +1100,7 @@ the number of lines processed <code>;)</code>
   Output
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1173,7 +1176,7 @@ any links that you are not going to use.
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.20.1" class="external-link">sandpaper (0.20.1)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.1.0" class="external-link">varnish (1.1.0)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.20.2" class="external-link">sandpaper (0.20.2)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.1.1" class="external-link">varnish (1.1.1)</a></p>
 		</div>
 		</footer>
 </div> <!-- / div.container -->
@@ -1195,9 +1198,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://carpentries.github.io/workbench-template-md/aio.html",
   "identifier": "https://carpentries.github.io/workbench-template-md/aio.html",
-  "dateCreated": "2026-05-19",
-  "dateModified": "2026-05-19",
-  "datePublished": "2026-05-19"
+  "dateCreated": "2026-05-20",
+  "dateModified": "2026-05-20",
+  "datePublished": "2026-05-20"
 }
 
   </script><script>
