@@ -133,12 +133,11 @@ Gene009	15.4	Receptor
 Gene010	42.7	Putative Regulator Gene
 Gene011	29.3	Chaperone
 Gene012	53.8	Metabolic Enzyme
-
+```
 
 To create the file, run the next command to create it:
 
 `$ vim table.tsv`
-
 
 As you can see, your terminal now looks different. `Vim` is a text editor, so please paste `ctrl c` the content you've copied from above at your terminal. USE THE ARROWS IF YOU NEED TO MAKE ANY CORRECTION TO THE TEXT AT ANY GIVEN ROW (the mouse will not work).
 
